@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.navbar img{
+    width: 60%;
+}
+
+.hero-section{
+    background-color: #343a40;
+    background-image: url(hero.jfif);
+    padding-top: 13rem;
+    padding-bottom: 13rem;
+    background-size: cover;
+    position: relative;
+}
+
+
+
+
+/***********************      FEATURE ICON      **********************/
+.box_icon{
+    background-color: antiquewhite;
+}
+.box_icon .container{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+.feature-icons{
+    width: 19rem;
+}
+.feature-icon{
+    height: 5rem;
+}
+.feature-icon i{
+    font-size: 4.3rem;
+}
+
+
+/* *********  Pictures Boxes  ********  */
+.picture_box{
+    width:100%;
+}
+.box1_content{
+width: 67%;
+}
+.box1_img{
+    width: 100%;
+    height: 27rem;
+}
+
+
+/* *********  Testimonial  ********  */
+.testimonial{
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    background: rgb(239, 237, 232);
+    color: black;
+}
+.testimonial img{
+    height: 12rem;
+}
+
+
+/* *********  Contact  ********  */
+.contact{
+    background-image: url(hero.jfif);
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+}
