@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+    <!-- Option 1: Include in HTML -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/css/select2.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.js"></script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+      body {
+        background-color: blanchedalmond;
+        width: 100%;
+        height: 100vh;
+      }
+      .card1 {
+        background-color: white;
+        height: fit-content;
+        width: fit-content;
+      }
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+      }
+      #title {
+        font-weight: 600;
+      }
+      input {
+        height: 2.5rem;
+        width: 100%;
+        border-radius: 0.3rem;
+        font-size: 20px;
+        outline: none;
+      }
+      label {
+        font-size: 19px;
+        font-weight: 500;
+      }
+      i {
+        -webkit-text-stroke: 2px;
+        font-size: 26px;
+      }
+      select,
+      input {
+        border: 2px solid rgb(207, 204, 204);
+      }
+      .exchange {
+        font-size: 19px;
+        font-weight: 600;
+      }
+      button {
+        background-color: rgb(0, 170, 17);
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-size: 19px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div
+          class="col-10 col-sm-8 col-lg-4 d-flex justify-content-center align-items-center h-100"
+        >
+          <div class="card1 rounded p-4 d-flex flex-column gap-4">
+            <h2 id="title">Currency Converter</h2>
+            <div class="d-flex flex-column gap-0">
+              <label>Enter Amount</label>
+              <input type="number" value="1" />
+            </div>
+            <div
+              class="currency d-flex justify-content-between align-items-end"
+            >
+              <div>
+                <label>From</label>
+                <br />
+                <select class="p-2 rounded" id="currency1">
+                  <!-- <option value="PKR">PKR</option>
+                                <option value="INR">INR</option>
+                                <option value="USD">USD</option>
+                                <option value="AFN">AFN</option>
+                                <option value="CYN">CYN</option>
+                                <option value="AUD">AUD</option>
+                                <option value="SAR">SAR</option>
+                                <option value="JPY">JPY</option>
+                                <option value="RUB">RUB</option>
+                                <option value="GTQ">GTQ</option> -->
+                </select>
+              </div>
+              <i class="bi bi-arrow-left-right"></i>
+              <div>
+                <label>To</label>
+                <br />
+                <select name="form" class="p-2 rounded" id="currency2">
+                  <!-- <option value="PKR">PKR</option>
+                                <option value="INR">INR</option>
+                                <option value="USD">USD</option>
+                                <option value="AFN">AFN</option>
+                                <option value="CYN">CYN</option>
+                                <option value="AUD">AUD</option>
+                                <option value="SAR">SAR</option>
+                                <option value="JPY">JPY</option>
+                                <option value="RUB">RUB</option>
+                                <option value="GTQ">GTQ</option> -->
+                </select>
+              </div>
+            </div>
+            <p class="exchange p-0 m-0">1 PKR = 1 PKR</p>
+            <button class="py-2 mb-4">Get Exchange Rate</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var btn = document.querySelector("button");
+      var LeftCurrency = document.querySelector("#currency1");
+      var RightCurrency = document.querySelector("#currency2");
+      var money = document.querySelector("input");
+      var exchange = document.querySelector(".exchange");
+      var moneyExchanged;
+      var currencyRate;
+
+
+      function optionCreation(key){
+                var option = document.createElement('option');
+                option.value = key;
+                option.innerHTML = key;
+                return option;
+      }
+
+      fetch(
+        "https://v6.exchangerate-api.com/v6/45895e5359e355b5dae59cc0/latest/PKR"
+      )
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+            var all_coin = data.conversion_rates;
+            console.log(all_coin);
+            for(var key in all_coin){
+                var option1 = optionCreation(key);
+                var option2 = optionCreation(key);
+                LeftCurrency.appendChild(option1);
+                RightCurrency.appendChild(option2);
+            }
+        })
+        .catch((error) => {
+            console.error('Network Problem');
+        });
+
+      btn.addEventListener("click", () => {
+        if (money.value != "") {
+          exchange.innerHTML = money.value + " " + LeftCurrency.value + " = ";
+          fetch(
+            "https://v6.exchangerate-api.com/v6/45895e5359e355b5dae59cc0/latest/" +
+              LeftCurrency.value
+          )
+            .then((response) => {
+              return response.json();
+            })
+            .then((data) => {
+              console.log(data.conversion_rates);
+              console.log(data.conversion_rates.PKR);
+              currencyRate = data.conversion_rates[RightCurrency.value];
+              moneyExchanged = money.value * currencyRate;
+              exchange.innerHTML += moneyExchanged + " " + RightCurrency.value;
+            })
+        .catch((error) => {
+            console.error('Network Problem');
+        });
+        } else {
+          alert("Amount will be in number!");
+        }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  height: 100vh;
+  background-color: #f1f7fd;
+}
+h1 {
+  font-weight: 700;
+  color: rgb(3, 3, 88);
+  font-size: 9vh;
+}
+h1::after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 8%;
+  padding-top: 0.5rem;
+  border-bottom: 6px solid #49a6ea;
+}
+.reviewCarousel {
+  height: 80%;
+}
+.reviewBox {
+  min-height: 79vh;
+  max-height: 100vh;
+  width: 60%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.testimonial img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.about strong {
+  font-size: 22px;
+  letter-spacing: 1px;
+  color: rgb(3, 3, 88);
+  width: auto;
+}
+.about p {
+  color: #49a6ea;
+}
+#description {
+  font-size: 20px;
+  color: #97a8b5;
+  text-align: center;
+}
+#surprise {
+  background-color: rgb(201, 241, 254);
+  color: #49a6ea;
+  border: 2px solid #49a6ea;
+  font-size: 19px;
+  font-weight: 600;
+}
+.btnMove {
+  width: fit-content;
+}
+.btnMove button:nth-child(1),
+button:nth-child(2) {
+  background-color: white;
+  border: none;
+  color: #49a6ea;
+}
+.btnMove button i {
+  font-size: 30px;
+  font-weight: 800;
+}

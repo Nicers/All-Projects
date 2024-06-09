@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="todolist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h1>My To Do List</h1>
+            <div class="in_head">
+                <input type="text" placeholder="Title..." id="con">
+                <button onclick="add_row()">Add</button>
+            </div>
+        </div>
+
+        <div class="display1">
+            <table id="tab">
+                <tr>
+                    <td>
+                        <p>Hit the gym</p>
+                        <button class="edit" onclick="Edit(this)">Edit</button><button class="cross" onclick="clear_row(this)"><i
+                                class="fa-sharp fa-solid fa-xmark"></i></button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>Greatest Golf</p><button class="edit" onclick="Edit(this)">Edit</button><button class="cross" onclick="clear_row(this)"><i
+                                class="fa-sharp fa-solid fa-xmark"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Hit the gym</p><button class="edit" onclick="Edit(this)">Edit</button><button class="cross" onclick="clear_row(this)"><i
+                                class="fa-sharp fa-solid fa-xmark"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Hit the gym</p><button class="edit" onclick="Edit(this)">Edit</button><button class="cross" onclick="clear_row(this)"><i
+                                class="fa-sharp fa-solid fa-xmark"></i></button>
+                    </td>
+                </tr>
+            </table>
+            <table id="tab2">
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script src="todolist.js"></script>
+</html>

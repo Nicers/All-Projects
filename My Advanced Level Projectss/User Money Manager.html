@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Js project Using Array</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            /* background-image: linear-gradient(to bottom right, #009245, #FCEE21); */
+            /* background-image: linear-gradient(to bottom right, #0100EC, #FB36F4); */
+            background-image: linear-gradient(to bottom right, #72FFB6, #10D164);
+        }
+        
+        .data{
+            width: 50%;
+            background-image: linear-gradient(to bottom right, #FD8451, #FFBD6F);
+        }
+        .project {
+            height: 100vh;
+        }
+        
+       
+button{
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+button:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
+        .btnn {
+            border-right: 3px solid white;
+        }
+
+        .title {
+            border-bottom: 3px solid white;
+        }
+        .title p:nth-child(odd){
+            font-weight: bold;
+        }
+
+        
+        .title h1,
+        p {
+            font-size: 33px;
+        }
+
+        .user h1,p {
+            font-size: 25px;
+            font-family: "JetBrains Mono",monospace;
+        }
+
+        .total_money h1,p {
+            font-size: 25px;
+            font-family: "JetBrains Mono",monospace;
+        }
+
+        .rich_user h1,
+        p {
+            font-size: 25px;
+            font-family: "JetBrains Mono",monospace;
+        }
+
+        .user,
+        .rich_user,
+        .total_money {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media only screen and (max-width:669px){
+            .data{
+                width: 100%;
+            }
+            .btnn{
+                width: 45%;
+            }
+            .btnn button{
+                font-size: 14px;
+            }
+            .title h1,p{
+                font-size: 15px;
+            }
+            .user h1,p{
+                font-size: 15px;
+            }
+            .total_money h1,p {
+            font-size: 15px;
+        }
+
+        .rich_user h1,
+        p {
+            font-size: 15px;
+        }
+        }
+        @media only screen and (max-width:400px){
+            .btnn button{
+                font-size: 12px;
+            }
+            .title h1,p{
+                font-size: 12px;
+            }
+            .user h1,p{
+                font-size: 11px;
+            }
+            .total_money h1,p {
+            font-size: 11px;
+        }
+
+        .rich_user h1,
+        p {
+            font-size: 11px;
+        }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="project">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col d-sm-flex flex-sm-column justify-content-sm-center align-items-sm-center h-100">
+                    <h1 class="pb-5 mt-5 mt-sm-0 mb-sm-0 text-center">User Dashboard</h1>
+                    <div class="data d-flex rounded p-2 p-sm-3 mt-2 mt-sm-0">
+                        <div class="btnn d-flex flex-column gap-4 justify-content-center pe-2 pe-sm-4 py-5 w-auto">
+                            <button class="p-2 px-sm-4" onclick="add_user()">Add User</button>
+                            <button class="p-2 px-sm-4" onclick="money_double()">Double Rs.</button>
+                            <button class="p-2 px-sm-4" onclick="rich_user()">Rich Man</button>
+                            <button class="p-2 px-sm-4" onclick="sort_user()">Richers</button>
+                            <button class="p-2 px-sm-4" onclick="total_money()">Total Rs.</button>
+                        </div>
+                        <div class="innerData ms-2 ms-sm-4 flex-grow-1 w-auto">
+                            <div class="title mb-4 d-flex justify-content-between align-items-center w-auto">
+                                <p>Persons</p>
+                                <p>Wealth</p>
+                            </div>
+                            <div class="users d-flex flex-column gap-0 w-auto">
+                                <!-- 
+                                <div class="user">
+                                    <h1>Hatim Udo</h1>
+                                    <p>$ 534,543,50</p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        var users = document.querySelector('.users');
+        var current_max = 0;
+        var user_div, user_p, user_h;
+        var money_Of_Users = [
+            {
+                name: 'Ata Ur Rehman',
+                balance: 130
+            },
+            {
+                name: 'Jawad',
+                balance: 20
+            },
+            {
+                name: 'Najib',
+                balance: 30
+            }
+        ];
+
+
+
+        function element_creation() {
+            user_div = document.createElement('div');
+            user_h = document.createElement('h1');
+            user_p = document.createElement('p');
+        }
+
+
+        function user_permanent(count) {
+            for (var i = 0; i <= 2; i++) {
+                if (count != 1) {
+                    element_creation();
+                    user_h.innerHTML = money_Of_Users[i].name;
+                    user_p.textContent = "$" + money_Of_Users[i].balance;
+                    user_div.appendChild(user_h);
+                    user_div.appendChild(user_p);
+                    user_div.classList.add('user');
+                    users.append(user_div);
+                }
+                else {
+                    var all_user = document.querySelectorAll('.user');
+                    for(var j=0; j<=money_Of_Users.length-1; j++){
+                        all_user.forEach((item, index) => {
+                            var money_tag = item.querySelector('p');
+                            var name_tag = item.querySelector('h1');
+                            if(j == index){
+                                    name_tag.innerHTML = money_Of_Users[j].name;
+                                    money_tag.innerHTML = "$" + money_Of_Users[j].balance;
+                            }
+                        });
+                    }
+                }
+            }
+        }
+        user_permanent(0);
+
+
+        function add_user() {
+            var total_check = users.querySelector('.total_money');
+            element_creation();
+            var new_user_name = random_name(0);
+            var new_user_money = random_name(1);
+            user_h.innerHTML = new_user_name;
+            user_p.textContent = "$" + new_user_money;
+            money_Of_Users.push({
+                name: new_user_name,
+                balance: new_user_money
+            });
+            if (total_check != null) {
+                total_check.remove();
+                user_div.appendChild(user_h);
+                user_div.appendChild(user_p);
+                user_div.classList.add('user');
+                users.append(user_div);
+            }
+            else {
+                user_div.appendChild(user_h);
+                user_div.appendChild(user_p);
+                user_div.classList.add('user');
+                users.append(user_div);
+
+            }
+        }
+
+
+        function money_double() {
+            money_Of_Users.map((item, index) => {
+                item.balance *= 2;
+            });
+
+            var users = document.querySelector('.users');
+            var total_check = users.querySelector('.total_money');
+
+            var total_sum = total_calculation();
+            if (total_check != null) {
+                var total_p = total_check.querySelector('p');
+                total_p.textContent = '$ ' + total_sum * 2;
+            }
+            user_permanent(1);
+        }
+
+
+        function sort_user() {
+            var all_user = document.querySelectorAll('.user');
+            if(all_user.length>1){
+                money_Of_Users.sort((a, b) => {
+                    return b.balance - a.balance;
+                });
+                user_permanent(1);
+            }
+        }
+
+
+        function total_calculation() {
+            var all_user = document.querySelectorAll('.user');
+            var sum = 0;
+            all_user.forEach((element, indexx) => {
+                var p_tag = element.querySelector('p');
+                var p_string = p_tag.innerHTML;
+                var p_value = p_string.slice(1);
+                p_money2 = parseInt(p_value);
+                sum += p_money2;
+            });
+            return sum;
+        }
+
+        function total_money() {
+            var all_user = document.querySelectorAll('.user');
+            var all_div = document.querySelectorAll('div');
+            var users = document.querySelector('.users');
+            var total = document.querySelector('.total_money');
+            var sum = 0;
+
+            all_user.forEach((element, indexx) => {
+                var p_tag = element.querySelector('p');
+                var p_string = p_tag.innerHTML;
+                var p_value = p_string.slice(1);
+                p_money2 = parseInt(p_value);
+                sum += p_money2;
+            });
+            var total_check = users.querySelector('.total_money');
+            element_creation();
+            user_h.innerHTML = "Total Money: ";
+            user_p.textContent = "$" + sum;
+            user_div.appendChild(user_h);
+            user_div.appendChild(user_p);
+            user_div.classList.add('total_money');
+            users.append(user_div);
+
+            if (total_check != null) {
+                total.remove();
+                user_p.textContent = '';
+                user_p.textContent = "$" + sum;
+            }
+
+        }
+
+
+        function rich_user() {
+            var all_user = document.querySelectorAll('.user');
+            var rich_user_balance = 0;
+            var rich_user_name;
+            var rich_index;
+
+            all_user.forEach((element, indexx) => {
+                var p_tag = element.querySelector('p');
+                rich_user_name = element.querySelector('h1');
+
+                var p_string = p_tag.innerHTML;
+                var p_value = p_string.slice(1);
+                p_money2 = parseInt(p_value);
+                if (rich_user_balance <= p_money2) {
+                    rich_index = indexx;
+                    rich_user_balance = p_money2;
+                    rich_user_name = money_Of_Users[rich_index].name;
+                    // rich_user_name = rich_user_name.querySelector('h1');
+
+                }
+                element.remove();
+            });
+            var total_check = document.querySelector('.total_money');
+            if (total_check != null) {
+                total_check.remove();
+            }
+            element_creation();
+            user_h.innerHTML = money_Of_Users[rich_index].name;
+            user_p.textContent = "$" + rich_user_balance;
+            user_div.appendChild(user_h);
+            user_div.appendChild(user_p);
+            user_div.classList.add('user');
+            users.append(user_div);
+        }
+
+
+
+        function capFirst(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        function generateName() {
+            var name1 = ["Aisha", "Bilal", "Zain", "Omar", "Layla", "Malik", "Yasir", "Amin", "Farah", "Kareem", "Nadia", "Rafiq", "Sana", "Tariq", "Samir", "Faisal", "Amina", "Rahim", "Dina", "Yasin", "Leila", "Ahmed", "Salma", "Hadi", "Sara", "Khalid", "Fatima", "Jamal", "Hana", "Karim", "Nida", "Rashid", "Naima", "Aziz", "Rania", "Amir", "Iman", "Rami", "Nour", "Talib", "Layla", "Hamza", "Zara", "Iqbal", "Zayd", "Saida", "Farid", "Aisha", "Fadi", "Zara", "Jibril", "Selma", "Tarek", "Inaya", "Zaynab", "Tahir", "Nyla", "Munir", "Naim", "Maha", "Riyad", "Aida", "Arif", "Yasmin", "Tameem", "Mona", "Rizwan", "Safa", "Jawad", "Amira", "Zaki", "Leena", "Iman", "Hadi", "Dalia", "Rafi", "Nada", "Saeed", "Zaina", "Qasim", "Asma", "Raheel", "Amal", "Nizar", "Noura", "Aziza", "Rami", "Naim", "Shireen", "Saif", "Alia", "Tamer", "Noor", "Asad", "Amna", "Nasir", "Leila", "Rami", "Zoya", "Kareem"];
+            var name2 = ["Grace", "Ahmed", "Ali", "Farooq", "Iqbal", "Yusuf", "Malik", "Abbas", "Khan", "Jamal", "Fatima", "Nadeem", "Rizwan", "Qureshi", "Begum", "Akhtar", "Rania", "Iman", "Naim", "Maha", "Tariq", "Mansoor", "Selma", "Saeed", "Nyla", "Noor", "Dalia", "Yasmin", "Tameem", "Mona", "Riyad", "Aida", "Arif", "Yasmin", "Tameem", "Mona", "Riyad", "Aida", "Arif", "Rizwan", "Malik", "Saif", "Tamer", "Noor", "Asad", "Amna", "Nasir", "Leila", "Zoya", "Ahmad", "Hamza", "Zara", "Tahir", "Saida", "Farid", "Noor", "Fadi", "Jibril", "Selma", "Tarek", "Inaya", "Zaynab", "Tahir", "Nyla", "Munir", "Naim", "Maha", "Riyad", "Aida", "Arif", "Yasmin", "Tameem", "Mona", "Riyad", "Aida", "Arif", "Rizwan", "Malik", "Safa", "Zaki", "Leena", "Dalia", "Rafi", "Nada", "Saeed", "Qasim", "Asma", "Raheel", "Amal", "Nizar", "Noura", "Aziza", "Shireen", "Saif", "Alia", "Tamer", "khan", "Marwat", "Afridi", "Nicer"];
+
+            var name = capFirst(name1[getRandomInt(0, name1.length)]) + ' ' + capFirst(name2[getRandomInt(0, name2.length)]);
+            return name;
+        }
+        function random_name(check) {
+            var name = generateName();
+            var money = Math.floor(Math.random() * 10000) + 1000;
+            if(check != 1){
+                return name;
+            }
+            else{
+                return money;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

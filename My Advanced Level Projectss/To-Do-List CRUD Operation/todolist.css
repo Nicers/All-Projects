@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    padding-top: 10rem;
+}
+.head{
+    margin: auto;
+    background-color: red;
+    text-align: center;
+    width: 70%;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.head h1{
+    color: white;
+    margin-bottom: 1rem;
+}
+.in_head{
+    display: flex;
+    justify-content: center;
+}
+.in_head input{
+    width: 60%;
+    height: 3rem;
+    border: none;
+    font-size: 1.5rem;
+    padding-left: .5rem;
+}
+.in_head button{
+    background-color: rgb(188, 188, 188);
+    border: none;
+    width: 15%;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.in_head button:nth-child(3){
+    background-color: green;
+    color: white;
+}
+
+
+/******************   DISPLAY - 1   *******************/
+.display1 {
+    margin: auto;
+    width: 70%;
+}
+.display1 table{
+    width: 100%;
+}
+.display1 table tr{
+    height: 2.5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.display1 #tab tr:nth-child(odd){
+    background-color: rgb(237, 183, 183);
+}
+.display1 #tab2 tr:nth-child(odd){
+    background-color: rgb(237, 183, 183);
+}
+.display1 #tab tr:nth-child(even){
+    background-color: rgb(250, 253, 206);
+}
+.display1 #tab2 tr:nth-child(even){
+    background-color: rgb(250, 253, 206);
+}
+.display1 tr:nth-child(even):hover{
+    background-color: rgb(189, 189, 189);
+}
+.display1 tr:nth-child(odd):hover{
+    background-color: rgb(189, 189, 189);
+}
+.display1 table tr td{
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    height: 3rem;
+    padding-left: 3rem;
+    padding-right: .5rem;
+}
+.display1 table tr td p {
+    flex-grow: 1; 
+    margin-right: 1rem; 
+}
+.display1 table tr .cross{
+   width:2%;
+   text-align:right;
+   background-color: transparent;
+   border: none;
+   cursor: pointer;
+   font-size: 1.5rem;
+   margin-left: 1rem; 
+}
+.display1 table tr td .edit{
+    width: 6%;
+    height: 2rem;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: .5rem;
+}
