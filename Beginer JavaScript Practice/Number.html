@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Methods</title>
+    <script>
+      document.write("<h2>Number Methods Section</h2>");
+
+      document.write("<h3>Anything To Number Conversion</h3>");
+      var a = "hello";
+      var b = Number(a);
+      document.write(
+        "Hello Convert to Number   ------>  Type of Hello : ",
+        typeof b,
+        "<br>"
+      );
+      a = true;
+      b = Number(a);
+      document.write("<br>True convert to Number   ----->  ", b);
+      a = false;
+      b = Number(a);
+      document.write("<br>False Convert to Number  -------->  ", b);
+
+      document.write("<h3>Anything to Integer Conversion</h3>");
+      a = 23.34;
+      b = parseInt(a);
+      document.write(b);
+
+      document.write("<h3>Anything To Float Conversion</h3>");
+      a = "50";
+      document.write('Type of "50"  ------>  ', typeof a);
+      b = parseFloat(a);
+      document.write('<br>Type of "50"  ----->   ', typeof b, "<br>", b);
+
+      document.write("<br><h3>Finding the Item is  Integer   or  NOT</h3>");
+      a = 50;
+      b = Number.isInteger(a);
+      document.write(b, "<br>");
+      a = "hello";
+      document.write(Number.isInteger(a));
+
+      document.write("<br><h3>Finding the Item is Finite or InFinite</h3>");
+      a = 100;
+      document.write(Number.isFinite(a));
+
+      document.write("<br><h3>Geting Number after Decimal Points</h3>");
+      a = 56.3434342;
+      document.write(a.toFixed(2));
+
+      document.write("<br><h3>Getting Number after Decimal Points</h3>");
+      a = 454.343334534;
+      document.write(a.toPrecision(5));
+    </script>
+  </head>
+  <body></body>
+</html>

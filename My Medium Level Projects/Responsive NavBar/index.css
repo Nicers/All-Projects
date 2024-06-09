@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #0080ff;
+}
+#header {
+  background-color: greenyellow;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+h1 span {
+  color: #49a6ea;
+}
+a {
+  text-decoration: none;
+}
+#tabs {
+  overflow: hidden;
+  height: 0;
+  transition: height 1s;
+}
+#tabs a {
+  color: black;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+#social a {
+  font-size: 20px;
+  color: #49a6ea;
+}
+
+#menu {
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.rotate {
+  transform: rotate(90deg);
+  font-size: 27px;
+}
+
+@media only screen and (min-width: 576px) {
+  #tabs {
+    height: auto;
+  }
+}

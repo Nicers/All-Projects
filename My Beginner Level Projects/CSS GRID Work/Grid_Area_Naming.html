@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Grid Area Naming</title>
+    <style>
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 120px 60px 100px 400px 50px;
+    grid-gap: 15px;
+    width: 720px;
+    margin: 45px auto 0;
+    grid-template-areas: 'header header header'
+    'men men men'
+    'box1 box2 sidebar'
+    'content content sidebar'
+    'footer footer footer';
+}
+        .header{
+            background-color: red;
+            grid-area: header;
+        }
+        .menu{
+background-color: yellowgreen;
+grid-area: men;
+        }
+        .box2{
+            background-color: palevioletred;
+            grid-area: box1;
+        }
+        .box1{
+            background-color: purple;
+            grid-area: box2;
+        }
+        .sidebar{
+            background-color: blue;
+            grid-area: sidebar;
+        }
+        .content{
+            background-color: aquamarine;
+            grid-area: content;
+                    }
+        .footer{
+            background-color: goldenrod;
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="header">Header</div>
+    <div class="menu">Menu</div>
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

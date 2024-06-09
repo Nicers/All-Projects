@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contains</title>
+    <style type="text/css">
+      #outer {
+        width: 1100px;
+        height: 250px;
+        background-color: lightsalmon;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: blue; margin-left: 600px">Contains Method</h1>
+
+    <div id="outer">
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim in, fuga
+        eos officiis corporis similique aspernatur maxime cum officia ad
+        quibusdam incidunt ipsa voluptates pariatur corrupti alias illum error
+        distinctio provident impedit. Ab esse nihil vel aperiam. Et, blanditiis
+        officiis!
+      </p>
+      <ul id="list">
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+      </ul>
+    </div>
+    <script src="">
+      var a, b, c;
+
+      a = document.getElementById("outer");
+      b = document.getElementById("list");
+      c = a.contains(b);
+      console.log(c);
+    </script>
+  </body>
+</html>

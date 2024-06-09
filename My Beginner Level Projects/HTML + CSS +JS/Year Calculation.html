@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var a = new Date().getTime(); // Return a timestamp
+        // Timestamp is an integer number that represent miliseconds
+        document.write(a);
+
+        var b = new Date('2023/01/23').getTime();
+
+        var diff = a-b;
+
+        var days = Math.floor(diff/(1000*60*60*24));
+        // 1000*60*60*24 = represents no. of miliseconds in a day
+        
+        var hours = Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+        // 1000*60*60 = reperesents no. of miliseconds in an hour
+        // diff%(1000*60*60*24) = represents no. of days
+        
+        var minutes = Math.floor((diff%(1000*60*60)) / (1000*60));
+        // 1000*60 = represents no. of milisends in minute
+        // diff%(1000*60*60) = represents no. of hours
+
+        var seconds = Math.floor((diff%(1000*60))/(1000));
+        // 1000 = represnts miliseconds
+        // diff%(1000*60) = represents the no. of minutes
+        document.write('<br><br>'+"Day: "+days+" &nbspHours: "+ hours + " &nbspMinutes: " + minutes + " &nbspSeconds: "+seconds);
+    </script>
+</body>
+</html>

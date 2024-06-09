@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Guessing Game</h1>
+    <label for="">Guess Number </label>
+    <input type="text" id="num">
+    <button onclick="data()">Submit</button>
+</body>
+<script>
+    function data(){
+    var user_number = document.getElementById('num').value;
+    var a=Math.floor(Math.random()*100)+1;
+
+    
+    if(user_number==a){
+        document.write('You Win!');
+    }else{
+        document.write('<br>You Lose! because original Number : ', a);
+    }
+    document.write("<br>Your enter number is : ",user_number);
+    }
+</script>
+</html>

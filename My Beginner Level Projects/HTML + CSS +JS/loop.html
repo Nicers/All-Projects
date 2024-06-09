@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops</title>
+  </head>
+  <body>
+    <script>
+      document.write("<h1>Task - 1</h1>");
+      var numbers = [10, 20, 30, 40, 50];
+      for (var a of numbers) {
+        document.write(a + "<br>");
+      }
+
+      document.write("<br><br><br>");
+      document.write("<h1>Task - 2</h1>");
+
+      var ages = [12, 56, 34, 78, 22, 46];
+      var results = [];
+      var index = 0;
+      for (var key of ages) {
+        results[index] = { age: key, name: "Nicer Atta" };
+        index++;
+      }
+      console.log(results);
+
+      document.write("<br><br><br>");
+      document.write("<h1>Task - 3</h1>");
+
+      var names = new Set();
+      var capsNames = new Set();
+
+      names.add("Bilbo");
+      names.add("Hermione");
+      names.add("spock");
+      names.add("Lela");
+
+      for (var value of names) {
+        capsNames.add(value.toUpperCase());
+        // document.write(value.toUpperCase());
+      }
+      document.write(names);
+      console.log(capsNames);
+
+      document.write("<br><br><br>");
+      document.write("<h1>Task - 4</h1>");
+
+      var backpack = new Map();
+      // backpack.
+      // backpack.add(600);
+      backpack.set(1, { name: "Ata", value: 500 });
+      backpack.set(2, { name: "Anwer", value: 100 });
+      backpack.set(3, { name: "Jawad", value: 300 });
+      backpack.set(4, { name: "Nicer Ata", value: 400 });
+      // backpack.set({name:'Nicer Atta', value: 400});
+      // backpack.set({name:'Jawad', value: 300});
+      // backpack.set({name:'Asghar', value: 200});
+
+      for (var value of backpack) {
+        // document.write(val[1].name);
+        document.write(`${value[1].name}: $${value[1].value}<br>`);
+      }
+      console.log(backpack);
+    </script>
+  </body>
+</html>

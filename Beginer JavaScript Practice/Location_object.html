@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Location Object</title>
+  </head>
+  <body>
+    <h1 style="color: blue; margin-left: 600px">Location Object</h1>
+    <button onclick="newfunction()">Click</button>
+    <script>
+      function newfunction() {
+        //document.write(location.href);
+        //location.href='https://www.google.com';
+        //location.reload();
+
+        /*  a = window.open('','','width=500px,height=500px');  
+    a.document.write('<h1>This is My Window</h1>');
+location.assign(a);*/
+        a = window.open("", "", "width=200px,height=200px");
+        a.document.write("<h1>This is My Window</h1>");
+        location.replace(a);
+      }
+    </script>
+  </body>
+</html>

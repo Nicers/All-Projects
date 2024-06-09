@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style type="text/css">
+        .container{
+            display:grid;
+            grid-template-columns:repeat(3,150px);
+            grid-template-rows:repeat(2,150px);
+            grid-gap:20px;
+        }
+        .items1{
+          background:red;
+        }
+        .items2{
+background:yellow;
+        }
+        .items3{
+            background:green;
+        }
+        .items4{
+            background:blue;
+        }
+        .items5{
+            background:pink;
+        }
+        .items6{
+            background:wheat;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="items1">Box 1</div>
+        <div class="items2">Box 2</div>
+        <div class="items3">Box 3</div>
+        <div class="items4">Box 4</div>
+        <div class="items5">Box 5</div>
+        <div class="items6">Box 6</div>
+    </div>
+
+</body>
+</html>

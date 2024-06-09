@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Max Function</title>
+    <style>
+        .container{
+            margin-top: 100px;
+            margin-left: 350px;
+            display: grid;
+            width: 700px;
+            height: 700px;
+            grid-template-columns:repeat(2,150px);
+            grid-template-rows: repeat(2,100px);
+            grid-gap: 15px;
+            grid-auto-rows: 50px;
+            grid-auto-flow: /*row*/column dense;
+            justify-content: /*center/end/start/space-between/space-around*/space-evenly;
+            align-content: /*center/end/space-between/space-around*/space-evenly;
+        }
+        .o{
+            background-color: red;
+
+        }
+        .t{
+            background-color: greenyellow;
+
+        }
+        .th{
+            background-color: pink;
+            grid-row: span 3;
+        }
+        .f{
+            background-color: blue;
+           
+        }
+        .fi{
+            background-color: palevioletred;
+
+        }
+        .s{
+            background-color: orange;
+            grid-column: span 2;
+        }
+        .se{
+            background-color: palegreen;
+            grid-column: span 2; 
+        } 
+        .e{
+            background-color: yellow;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="o">One</div>
+    <div class="t">Two</div>
+    <div class="th">Three</div>
+    <div class="f">Four</div>
+    <div class="fi">Five</div>
+    <div class="s">Six</div>
+    <div class="se">Seven</div>
+    <div class="e">Eight</div>
+    </div>
+</body>
+</html>

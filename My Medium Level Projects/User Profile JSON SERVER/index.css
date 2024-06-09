@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+  }
+  .search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 5px;
+    background-color: yellow;
+    margin-top: 2rem;
+    padding: 1.5rem;
+  }
+  input {
+    height: 3rem;
+    border: 1px solid rgb(168, 164, 164);
+    outline: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding-left: .5rem;
+  }
+  input:focus {
+    outline: none;
+    background-color: greenyellow;
+  }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Overlapping</title>
+    <style type="text/css">
+        .container{
+            margin-left: 400px;
+            margin-top: 100px;
+            background-color: lightgray;
+            display:grid;
+            grid-template-columns:repeat(2,150px);
+            grid-template-rows:repeat(2,150px);
+        }
+        .items{
+            max-width: 150px;
+        }
+        .items1{
+          background:red;
+          grid-column: 1/span 2;
+          grid-row: 1 / span 2;
+          align-self: start;
+          justify-self: start;
+          z-index: 3;
+        }
+        .items2{
+background:yellow;
+grid-column: 1/span 2;
+          grid-row: 1 / span 2;
+          align-self: center;
+          justify-self: center;
+          z-index: 1;
+        }
+        .items3{
+            background:green;
+            grid-column: 1/span 2;
+          grid-row: 1 / span 2;
+          align-self: end;
+          justify-self: end;
+          z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="items items1">Box 1 Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, accusamus! amet consectetur adipisicing elit. Beatae, sed?</div>
+        <div class="items items2">Box 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, dolorem! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, enim?</div>
+        <div class="items items3">Box 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, error. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, quam!</div>
+    </div>
+
+</body>
+</html>

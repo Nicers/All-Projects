@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Card</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            background-color: antiquewhite;
+        }
+
+        .card {
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            transition: all .3s;
+            cursor: default;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+        }
+
+        .card-img-top {
+            height: 17em;
+        }
+
+        .card-img-top img {
+            border-radius: 15px;
+            width: 100%;
+            height: 100%;
+        }
+
+        .core1,
+        .core2,
+        .top-title {
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .core1 {
+            border-radius: 15px;
+            background-color: blue;
+        }
+
+        .core2 {
+            border-radius: 15px;
+            background-color: rgb(255, 166, 0);
+        }
+
+        .core1 .title1 {
+            background-color: blue;
+            font-size: 10px;
+            border-radius: 15px;
+        }
+
+        .top-title .title1 {
+            font-size: 12px;
+            border-radius: 15px;
+            width: 100%;
+        }
+
+        .top-title {
+            position: absolute;
+            top: 3%;
+            right: 3%;
+            border-radius: 6px;
+            background-color: rgb(3, 179, 3);
+            align-self: flex-start;
+        }
+
+        .imagee {
+            display: flex;
+            align-items: center;
+        }
+
+        .price {
+            color: rgb(154, 151, 151);
+        }
+
+        .prices a {
+            font-family: 600;
+            font-size: 17px;
+        }
+
+        .price2 {
+            font-size: 12px;
+            border-radius: 15px;
+        }
+
+        .review {
+            color: rgb(154, 151, 151);
+        }
+
+        .review:hover {
+            color: rgb(154, 151, 151);
+        }
+
+        .btn {
+            background-color: rgb(255, 166, 0);
+            border-radius: 20px;
+            font-size: 17px;
+            font-weight: 500;
+            text-align: center;
+            line-height: 1.9rem;
+        }
+        .btn:hover {
+            background-color: rgb(236, 168, 42);
+        }
+
+        .icons i {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cards">
+        <div class="container-fluid">
+            <div class="row d-flex m-5 justify-content-center">
+                <div class="col-12 col-sm-6 col-lg-3 mb-5 mb-lg-0">
+                    <div class="card border-0 h-100">
+                        <div class="card-img-top w-100">
+                            <img src="IMAGES/perse1.jpg" alt="Woman Perse">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <div class="prices d-flex justify-content-between">
+                                <div class="core1 px-3"><b class="title1">ASUS ROG</b></div>
+                                <b class="price">12354.00 Rs.</b>
+                            </div>
+                            <div class="d-flex flex-column align-items-center">
+                                <h4 class="fs-6 fw-bold my-4 align-self-center">Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing elit. Veniam quidem eaque ut eveniet</h4>
+                                <button class="btn align-self-center py-0 px-5 text-white" onclick="order()">CHECK
+                                    OFFER</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-lg-3 mb-5 mb-lg-0">
+                    <div class="card border-0 h-100">
+                        <div class="card-img-top w-100">
+                            <img src="IMAGES/lipstik.jpg" alt="Woman Perse">
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <div class="prices d-flex justify-content-between">
+                                <div class="core2 px-3"><b class="price2">12354.00 Rs.</b></div>
+                                <a href="">Examples</a>
+                            </div>
+                            <div class="d-flex flex-column align-items-center">
+                                <h4 class="fs-6 fw-bold my-4 align-self-center">Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing elit. Veniam quidem eaque ut eveniet</h4>
+                                <button class="btn align-self-center py-0 px-5 text-white" onclick="order()">CHECK
+                                    OFFER</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-lg-3 mb-5 mb-lg-0">
+                    <div class="card border-0">
+                        <div class="card-img-top w-100">
+                            <img src="IMAGES/ear.jpg" class="w-100 h-100" alt="Woman Perse">
+                            <div class="top-title px-2 py-1"><b class="title1">CLIPKART</b></div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <div class="prices d-flex justify-content-between">
+                                <div class="core2 px-3"><b class="price2">12354.00 Rs.</b></div>
+                                <a href="" class="review">Reviews</a>
+                            </div>
+                            <div class="d-flex flex-column align-items-center">
+                                <h4 class="fs-6 fw-bold my-4 align-self-center">Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing elit. Veniam quidem eaque ut eveniet</h4>
+                                <button class="btn align-self-center py-0 px-5 text-white" onclick="order()">CHECK
+                                    OFFER</button>
+                            </div>
+                            <div class="icons d-flex justify-content-between pt-4">
+                                <i class="far fa-question-circle" id="det1" onmouseover="detail()"></i>
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-lg-3 mb-5 mb-lg-0">
+                    <div class="card border-0">
+                        <div class="card-img-top w-100">
+                            <img src="IMAGES/perse2.jpg" class="w-100 h-100" alt="Woman Perse">
+                            <div class="top-title px-2 py-1"><b class="title1">AMAZON</b></div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <div class="prices d-flex justify-content-between">
+                                <b class="price">12354.00 Rs.</b>
+                                <a href="" class="review">Reviews</a>
+                            </div>
+                            <div class="d-flex flex-column align-items-center">
+                                <h4 class="fs-6 fw-bold my-4 align-self-center">Lorem, ipsum dolor sit amet consectetur
+                                    adipisicing elit. Veniam quidem eaque ut eveniet</h4>
+                                <button class="btn align-self-center py-0 px-5 text-white" onclick="order()">CHECK
+                                    OFFER</button>
+                            </div>
+                            <div class="icons d-flex justify-content-between pt-4">
+                                <i class="far fa-question-circle" id="det2" onmouseover="detail()"></i>
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function order() {
+            alert('Thanks Order')
+        }
+        function detail() {
+            var det1 = document.getElementById('det2').title = 'Yes, its an beautiful woman perse!';
+            var det1 = document.getElementById('det1').title = 'Awesome! Female Ears things';
+        }
+    </script>
+</body>
+
+</html>

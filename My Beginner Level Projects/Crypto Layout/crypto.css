@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/******************************   HEADER   ******************************/
+header{
+    height: auto;
+    background-color: black;
+}
+header a{
+    text-decoration: none;
+    color: white;
+}
+header #logo{
+    background-color: rgb(54, 209, 54);
+    width: 50px;
+    height: auto;
+}
+header #logo a{
+    font-size: 25px;
+}
+#logo a:hover{
+    color: white;
+}
+header .tab a{
+    font-size: 18px;
+    font-weight: 500;
+}
+.tab a:hover{
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-underline-offset: 5px;
+}
+.tab a #header-search{
+    font-size: 27px;
+}
+
+
+
+
+/******************************   HOME   ******************************/
+.home{
+    background-image:url(Images/hero-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+.home h1{
+    font-size: 70px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+.home h3{
+    font-size: 40px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+.home .btn1{
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-top: 3.5rem;
+    transition: margin-top .5s;
+    width: fit-content;
+    height: fit-content;
+}
+.home .btn1:hover{
+    margin-top: 3rem;
+}
+.image img{
+    height: 27rem;
+}
+.slide_control button{
+    width: 20px;
+    height: 20px;
+    border: 2.5px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+}
+.slide_control .movee{
+    border: 5px solid white;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border-radius: 50%;
+}

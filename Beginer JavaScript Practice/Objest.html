@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+    <script>
+      document.write("<h2>Objects Section</h2>");
+
+      document.write("<br><br><h3>Simple Object</h3>");
+      var on_object = {
+        name: "Ata Marwat",
+        age: 17,
+        from: "Lakki Marwat",
+        Province: "KPK",
+        Country: "Pakistan",
+      };
+      for (var i in on_object) {
+        document.write(on_object[i] + "<br>");
+      }
+
+      document.write(
+        "<br><br>One Property  ------>    ",
+        on_object.name,
+        "<br><br>"
+      );
+
+      document.write(
+        "<h2>Object Consist of Array  ,  Function   ,  Object</h2>"
+      );
+      var k = {
+        FName: "Muzzamil",
+        LName: " Rehman",
+        city: "Lakki Marwat",
+        age: 19,
+        sport: ["Cricket", "Football", "Hockey"],
+        work: function () {
+          return 500;
+        },
+        FullName: function () {
+          return this.FName + "" + this.LName;
+        },
+        Hobby: {
+          no1: "Movies",
+          no2: "Walk",
+          no3: "Refreshment",
+        },
+      };
+      document.write(
+        k.Hobby.no3,
+        "<br>",
+        k.FName,
+        "<br>",
+        k.sport,
+        "<br>",
+        k.work(),
+        "<br>",
+        k.FullName(),
+        "<br>"
+      );
+
+      document.write(
+        "<br><br><h2>Creation Of Object Method   ----->   2</h2><br><br><br>"
+      );
+      var b = new Object();
+      b.Country = "Pakistan";
+      b.Capital = "Islamabad";
+      b.City = "Lakki Marwat";
+      b.sport = "Cricket";
+      document.write(
+        "<h3>Single Of Object   ---->     ",
+        b.Country,
+        "</h3><br>"
+      );
+      document.write(
+        "<h3>Single Of Object   ---->     ",
+        b["Country"],
+        "</h3><br>"
+      );
+      for (var a in b) {
+        document.write(b[a], "<br>");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

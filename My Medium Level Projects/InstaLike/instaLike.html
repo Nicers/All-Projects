@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Like Button</title>
+<style>
+    body{
+        background-color: rgb(81, 159, 81);
+        height: 100vh;
+    }
+    .box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    .box #image1{
+        border-radius: 10px;
+        height: 25rem;
+        width: 20rem;
+        object-fit: cover;
+        object-position: center;
+        cursor: pointer;
+    }
+    .image2{
+        position: absolute;
+        height: 6rem;
+        width: 6rem;
+        opacity: 1;
+        scale: (0.8);
+        transition: 1s;
+    }
+</style>
+</head>
+<body>
+    <div class="box">
+        <h1>Double Click on Image</h1>
+        <img src="a.jpg" alt="" id="image1" ondblclick="addLike()">
+    </div>
+
+    <script>
+        var box = document.querySelector('.box');
+        function addLike() {
+            var img2 = document.createElement('img');
+                img2.src = 'heart.png';
+                img2.classList.add('image2');
+                box.appendChild(img2);
+           setTimeout(() => {
+                img2.remove();
+            }, 2000);
+        };
+        // clearInterval(show);
+    </script>
+</body>
+</html>

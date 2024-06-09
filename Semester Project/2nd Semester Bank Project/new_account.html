@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header">
+    <h1> <marquee behavior="scroll">Bank Managment System</marquee></h1>
+<br>
+<br>
+</section>
+
+
+<section id="fom">
+    <a href="index.html" id="hom" title="Go to Home Page">Home</a>
+    <h1>Account Information</h1>
+<form action="" id="new_at">
+    <h1 id="demo"></h1>
+    <label for="" class="acc">Account No : </label>
+    <input type="number" autofocus=""  id="account_no" maxlength="7"><br><br>
+    
+    <label for="" class="acc" id="acc_type2">Name : </label>
+    <input type="text" autofocus  id="name"><br><br>
+    
+    <label for="" class="acc" id="acc_type3">Date Of Birth : </label>
+    <input type="date" placeholder="02-06-2003" autofocus id="birth"><br><br>
+
+    <label for="" class="acc" id="acc_type4">Running Amount : </label>
+    <input type="number" autofocus  title="Min amount = 1000" id="r_amount"><br><br>
+
+    <label for="" class="acc" id="acc_type5">Mobile No: </label>
+    <input type="tel"  autofocus maxlength="11" id="mobile"><br><br>
+
+    <label for="" class="acc" id="acc_type6">Cast : </label>
+    <input type="text"  autofocus id="cast"><br><br>
+
+    <label for="" class="acc" id="acc_type7">Address : </label>
+    <input type="text"  autofocus id="address"><br><br>
+
+    <label for="" class="acc" id="acc_type8">Gender : </label>
+    <input type="radio" name="gender" class="acc_type99"><label for="" class="acc_type9"> Male</label>
+    <input type="radio" name="gender" class="acc_type99"><label for="" class="acc_type9"> Female</label>
+    <input type="radio" name="gender" class="acc_type99"><label for="" class="acc_type9"> Other</label><br><br>
+
+    <label for="" class="acc" id="acc_type11" style="display: inline-block;margin-top:1%;">Account Type : </label>
+    <div id="account_tp">
+    <div id="ty1">
+    <input type="radio" class="acco" name="account">
+    <input type="radio" class="acco" name="account">
+    <input type="radio" class="acco" name="account">
+    <input type="radio" class="acco" name='account'>
+   </div>
+   <div id="ty2">
+    <label for="" class="acc2" id="acc_typea"> Saving</label>
+    <label for="" class="acc2" id="acc_typeb"> Property Sale</label>
+    <label for="" class="acc2" id="acc_typec"> Vehicle Sale</label>
+    <label for="" class="acc2" id="acc_typed"> Others</label>
+   </div>
+  </div>
+    
+    <label for="" class="acc" id="acc_type12">Others : </label>
+    <input type="text" placeholder="Name Of Account Type" autofocus title="If you select other in account type then write name of account"><br><br>
+
+    <label for="" class="acc" id="acc_type14">Security Question : </label>
+    <input type="text" placeholder="What is your Primary School Name?" autofocus title="Enter Your Primary School Name?" id="question"><br><br>
+
+    <label for="" class="acc" id="acc_type13">Buttons : </label>
+    <button type="button" onclick="save_data()">Submit</button>
+    <button type="button" onclick="view_data()">Reset</button>
+</form>
+</section>
+<script src="javascript_1.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siderbar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+            font-size: 16px;
+        }
+
+        a i {
+            font-size: 20px;
+        }
+
+        a:hover {
+            background: transparent;
+            color: white;
+        }
+
+        .vertical1 a:focus {
+            border-left: 2px solid white;
+        }
+
+        .vertical1 {
+            height: 100vh;
+            width: 88px;
+            transition: width 2s;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav {
+            background-color: rgb(5, 5, 148);
+            height: 100%;
+            padding-right: 5em;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .horizontal {
+            background-color: rgb(221, 215, 215);
+            height: 5rem;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .horizontal i {
+            padding-left: 90px;
+            font-size: 30px;
+            color: rgb(17, 17, 198);
+            cursor: pointer;
+            transition: padding-left 2s ease;
+        }
+
+        .icon a span {
+            padding-right: 3rem;
+        }
+
+        .show {
+            width: 220px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container-fluid m-0 p-0">
+            <div class="row">
+                <div class="col-3 col-sm-4 vertical1" id="leftNav">
+                    <div class="nav h-100 d-flex flex-column justify-content-between py-4 pe-4">
+                        <div class="d-flex flex-column gap-4">
+                            <div class="icon">
+                                <a href="#" class="ps-4 py-2"><i class="bx bx-layer"></i>
+                                    <span class="sp">Nicer Web</span>
+                                </a>
+                            </div>
+                            <div class="icon">
+                                <a href="#" class="ps-4 py-2"><i class="bx bx-grid-alt"></i>
+                                    <span class="sp">Dashboard</span>
+                                </a>
+                            </div>
+                            <div class="icon">
+                                <a href="#" class="ps-4 py-2"><i class="bx bx-user"></i>
+                                    <span class="sp">Users</span>
+                                </a>
+                            </div>
+                            <div class="icon">
+                                <a href="#" class="ps-4 py-2"><i class="bx bx-message-square-detail""></i>
+                        <span class=" sp">Messages</span>
+                                </a>
+                            </div>
+                            <div class="icon">
+                                <a href="#" class="ps-4 py-2"><i class="bx bx-bookmark"></i>
+                                    <span class="sp">Bookmark</span>
+                                </a>
+                            </div>
+                            <div class="icon">
+                                <a href="#" class="ps-4 py-2"><i class="bx bx-folder"></i>
+                                    <span class="sp">Files</span>
+                                </a>
+                            </div>
+                            <div class="icon">
+                                <a href="#" class="ps-4 py-2"><i class="bx bx-bar-chart-alt-2"></i>
+                                    <span class="sp">Stats</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="icon-last">
+                            <a href="#" class="ps-4 py-2"><i class="bx bx-log-out"></i>
+                                <span class="sp">SignOut</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col horizontal d-flex align-items-center ps-4">
+                    <i class="bx bx-menu" onclick="classChange()" id="control"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <script>
+        function classChange() {
+            var leftnav = document.getElementById('leftNav');
+            var control = document.getElementById('control');
+
+            control.classList.toggle('bx-menu');
+            control.classList.toggle('bx-x');
+            leftnav.classList.toggle('show');
+
+            // Checking if icon = 'bx bx-menu bx-x'
+            if (control.classList.contains('bx-x')) {
+                control.style.paddingLeft = '220px';
+            } else {
+                control.style.paddingLeft = '';
+            }
+        }
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</body>
+
+</html>

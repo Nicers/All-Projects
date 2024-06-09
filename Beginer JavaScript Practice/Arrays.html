@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+    <script>
+      document.write("<h2>Arrays Section</h2>");
+      var a = [23, 34, 45, 56, 23];
+      document.write(a);
+      document.write("<br>");
+      document.write("<br>" + a[0] + "<br>");
+      document.write("<br>");
+      for (var b = 0; b <= 4; b++) {
+        document.write(a[b] + "<br>");
+      }
+      document.write("<br>");
+      for (var b = 0; b <= a.length - 1; b++) {
+        document.write(a[b] + "<br>");
+      }
+      document.write("<br><ul>");
+      for (var b = 0; b <= 4; b++) {
+        document.write("<li>" + a[b] + "</li><br>");
+      }
+      document.write("</ul><br>");
+      var sum = 0;
+      for (var b = 0; b <= a.length - 1; b++) {
+        sum = sum + a[b];
+      }
+      document.write(
+        "<h3>Sum of All Item of Array  ------>    ",
+        sum,
+        "</h3><br>"
+      );
+      document.write("<br><h2>Creation Of Array Method  ----->   2</h2>");
+      var c = new Array();
+      c[0] = 34;
+      c[1] = "Human";
+      c[2] = "Animal";
+      c[3] = "Earth";
+      for (var i in c) {
+        document.write(c[i]);
+      }
+
+      document.write("<br>");
+      document.write("<br>");
+      for (var i in c) {
+        document.write(c[i], "<br>");
+      }
+
+      document.write("<br>");
+      document.write("<br>");
+      c[0] = prompt("Enter 1st Value to Array : ");
+      c[1] = prompt("Enter 2nd value to Array : ");
+      c[2] = prompt("Enter 3rd value to Array : ");
+      c[3] = prompt("Enter 4th value to Array : ");
+      for (var i in c) {
+        document.write(c[i], "<br>");
+      }
+
+      document.write("<br><br><h2>MultiDimentionall Arrays</h2>");
+      var d = [
+        ["Class", "Software", "Batch", 21],
+        ["RollNo", "Names", "age", "From"],
+        [1, "Zahoor", 19, "Lakki Marwat"],
+        [2, "Fareed", 20, "Lakki Marwat"],
+        [3, "Jawad", 17, "DI khan"],
+        [4, "Anwar", 34, "Taank"],
+      ];
+
+      document.write(
+        "<h3>Length Of  2D Array  ----->     ",
+        d.length + "</h3>"
+      );
+      document.write("<br>" + d[0][2] + "<br><br>", d[2], "<br><br>");
+      for (var a in d) {
+        document.write(d[a] + "<br>");
+      }
+
+      document.write("<br><br>");
+      for (var a = 0; a < 6; a++) {
+        for (var b = 0; b < 4; b++) {
+          document.write(d[a][b] + "  " + "  " + "  ");
+        }
+        document.write("<br>");
+      }
+
+      document.write("<br><br>");
+      document.write(d);
+
+      document.write("<br><br>");
+      for (var a = 0; a <= 5; a++) {
+        document.write(d[a]);
+      }
+
+      document.write('<br><br><table border="4px">');
+      for (var a = 0; a < 6; a++) {
+        document.write("<tr>");
+        for (var b = 0; b < 4; b++) {
+          document.write("<td>", d[a][b] + "</td>");
+        }
+        document.write("</tr>");
+      }
+      document.write("</table>");
+
+      document.write('<br><br><table border="4px" cellspacing="0">');
+      for (var a = 0; a < 6; a++) {
+        document.write("<tr>");
+        for (var b = 0; b < 4; b++) {
+          document.write("<td>", d[a][b] + "</td>");
+        }
+        document.write("</tr>");
+      }
+      document.write("</table>");
+
+      document.write("<br><br><h2>Array Printing By forEach() Method</h2>");
+      var f = [34, 36, 37];
+      f.forEach(function (value, index) {
+        document.write(
+          "Index  ---->   ",
+          index + " :  Value  ----->" + value + "<br>"
+        );
+      });
+
+      document.write("<br><br>");
+      f.forEach(loop);
+      function loop(value, index) {
+        document.write(
+          "Index   ----->  ",
+          index,
+          " :   Value  ----->   ",
+          value,
+          "<br>"
+        );
+      }
+
+      document.write("<br><br><h2>Array Printing By Map() Methods</h2><br>");
+      var ar = [23, 24, 12, 11];
+      var b = ar.map(test);
+      document.write(b, "<br><br><br>");
+      function test(x) {
+        return x * 10;
+      }
+
+      var ob = [
+        {
+          fname: "Ata",
+          lname: "Rehman",
+        },
+        {
+          fname: "Muhammad",
+          lname: "Rehman",
+        },
+        {
+          fname: "Muzzamil",
+          lname: "Rehman",
+        },
+      ];
+      var b = ob.map(check);
+      document.write(b, "<br>");
+      function check(x) {
+        return x.fname + " " + x.lname;
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

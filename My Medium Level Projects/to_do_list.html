@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+</head>
+
+<style>
+    body{
+        width: 100%;
+        height: auto;
+    }
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .box{
+        background-color: rgb(250, 39, 39);
+        width: 100%;
+        height: 10rem;
+        overflow: auto;
+    }
+    .box h1{
+        color: white;
+        text-align: center;
+        margin-top:3rem;
+    }
+    .ad{
+        text-align: center;
+       /* margin-top: 2.9rem;*/
+    }
+    .ad input{
+        width: 65%;
+        height: 3rem;
+        font-size: 20px;
+    }
+    .ad button{
+        width: 10%;
+        height: 3rem;
+        background-color: lightgrey;
+        border: none;
+        color: grey;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .ad button:hover{
+        background-color:rgb(197, 194, 194);
+        columns: grey;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>MY TO DO LIST</h1>
+            <div class="ad">
+            <input type="text" placeholder="Title..." id="task">
+            <button id="submit">Add</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+var bt = document.getElementById("submit");
+const t=document.getElementById("task").innerText;
+document.write(t);
+bt.addEventListener('click', func);
+function func(){
+    if(t==""){
+    alert("You must Write Something!");
+    document.write(t);
+    }
+    else
+    {
+        var num;
+        alert("Right");
+        document.write(t);
+    }
+}
+    </script>
+</body>
+</html>

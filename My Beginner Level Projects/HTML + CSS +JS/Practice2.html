@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Today 6 Questions Practice</h1>
+    <br /><br /><br />
+  </body>
+  <script>
+    //  Question ------- 1
+    document.write("<h2>Question ------> 1</h2>");
+    var a = 10,
+      b = 20;
+    function calculation(a, b) {
+      if (a == b) {
+        return `Product of a & b = ${a * b} `;
+      } else {
+        return `Sum of a & b = ${a + b} `;
+      }
+    }
+    document.write(calculation(a, b));
+
+    //  Question ------- 2
+    document.write("<br><br><br><h2>Question ------> 2</h2>");
+    var str1 = [];
+    function check() {
+      for (var i = 0; i < 100; i++) {
+        if (i % 7 == 0) {
+          str1.push(i);
+        }
+      }
+      var st = str1.toString();
+      document.write("Type of St Variable is : " + typeof st);
+      return st;
+    }
+    document.write("<br> 0-99 Numbers that is divisable by 7 : " + check(str1));
+
+    //  Question ------- 2
+    document.write("<br><br><br><h2>Question ------> 2</h2>");
+    function check() {
+      var str1 = "";
+      for (var i = 0; i < 100; i++) {
+        if (i % 7 == 0) {
+          var iString = i.toString();
+          str1 = str1 + " " + iString;
+        }
+      }
+      return str1;
+    }
+    console.log(check());
+    document.write("<br> 0-99 Numbers that is divisable by 7 : " + check());
+
+    //  Question ------- 3
+    document.write("<br><br><br><h2>Question ------> 3</h2>");
+    var CheckString = "AtaUrRehman";
+    function letter(w) {
+      var ww = " ";
+      for (var i = 0; i < w.length; i++) {
+        ww = ww + w[i++];
+      }
+      return ww;
+    }
+    document.write("<br>Array that you passed : ' " + CheckString + " '");
+    document.write(
+      "<br>Printing the 2nd Letter of words : " + letter(CheckString)
+    );
+
+    //  Question ------- 4
+    document.write("<br><br><br><h2>Question ------> 4</h2>");
+    var IntegerArray = [1, 3, 4, 4, 0, 0];
+    var count1 = 0,
+      count2 = 0;
+    function checkArray(arr) {
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] == 4) {
+          count1++;
+        } else if (arr[i] == 0) {
+          count2++;
+        }
+      }
+      if (count1 > count2) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    document.write("<br>Array that you passed : [ " + IntegerArray + " ]");
+    document.write(
+      "<br>It is a New array & it contain 2nd element of both array : " +
+        checkArray(IntegerArray)
+    );
+
+    //  Question ------- 5
+    document.write("<br><br><br><h2>Question ------> 5</h2>");
+    var LetterArray = ["a", "b", "c", "d", "e"];
+    function reverse(arr) {
+      return arr.reverse();
+    }
+    document.write(
+      "<br>It is a New array & it contain 2nd element of both array : [ " +
+        reverse(LetterArray) +
+        " ]"
+    );
+
+    //  Question ------- 6
+    document.write("<br><br><br><h2>Question ------> 6</h2>");
+    var arr1 = [2, 4, 6];
+    var arr2 = [1, 3, 5];
+    function secondArray(arr1, arr2) {
+      var arr3 = [arr1[1], arr2[1]];
+      return arr3;
+    }
+    document.write(
+      "<br>It is a New array & it contain 2nd element of both array : " +
+        secondArray(arr1, arr2)
+    );
+  </script>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- <link rel="stylesheet" href=""> -->
+    <title>Monkey Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            background-color: rgb(224, 221, 221);
+        }
+        .card {
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .card i {
+            font-size: 40px;
+            background-color: rgb(232, 227, 227);
+            border-radius: 16px;
+            padding: 5px;
+        }
+
+        .card-header small{
+            font-size: 15px;
+        }
+
+        .card-header i,
+        .design {
+            flex: 0;
+            align-self: flex-start;
+        }
+
+        .design ,.badge{
+            background-color: rgb(255, 255, 189);
+            color: orange;
+            font-size: 13px;
+            width: fit-content;
+            height: fit-content;
+        }
+
+        .card-body span {
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cards">
+        <div class="container-fluid mb-5 mb-sm-0 p-0 p-sm-5">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+                    <div class="card p-4 h-100 m-4 m-sm-0">
+                        <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center p-0 m-0">
+                            <div class="d-flex gap-3 justify-content-center align-items-center p-0 m-0">
+                                    <i class="bx bxl-mailchimp"></i>
+                                    <h6 class="p-0 m-0">MailChimp<br><small class="lead">2 days ago</small></h6>
+                                </div>
+                                    <span class="badge px-3 py-2">Design</span>
+                        </div>
+                        <div class="card-body mt-5 p-0 d-flex flex-column justify-content-between">
+                            <h3 class="card-title mb-5">Senior Product Designer-Singapore</h3>
+                            <div class="progress mt-2 mb-3" style="height: 10px;">
+                                <div class="progress-bar" style="width: 50%;"></div>
+                            </div>
+                            <p><span>32 applied of</span> &nbsp;<span class="text-muted">50 capacity</span></p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+                    <div class="card p-4 h-100 m-4 m-sm-0">
+                        <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center p-0 m-0">
+                            <div class="d-flex gap-3 justify-content-center align-items-center p-0 m-0">
+                                    <i class="bx bxl-sketch"></i>
+                                    <h6 class="p-0 m-0">NicerWeb<br><small class="lead">2 days ago</small></h6>
+                                </div>
+                                    <span class="badge px-3 py-2">Design</span>
+                        </div>
+                        <div class="card-body mt-5 p-0 d-flex flex-column justify-content-between">
+                            <h3 class="card-title mb-5">Web Developer Designer-Pakistan</h3>
+                            <div class="progress mt-2 mb-3" style="height: 10px;">
+                                <div class="progress-bar" style="width: 50%;"></div>
+                            </div>
+                            <p><span>32 applied of</span> &nbsp;<span class="text-muted">50 capacity</span></p>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="col-sm-6 col-md-6 col-lg-3 mb-5 mb-sm-0">
+                    <div class="card p-4 h-100 m-4 m-sm-0">
+                        <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center p-0 m-0">
+                            <div class="d-flex gap-3 justify-content-center align-items-center p-0 m-0">
+                                    <i class="bx bxl-dribbble"></i>
+                                    <h6 class="p-0 m-0">Dribble<br><small class="lead">4 days ago</small></h6>
+                                </div>
+                                    <span class="badge px-3 py-2">Product</span>
+                        </div>
+                        <div class="card-body mt-5 p-0 d-flex flex-column justify-content-between">
+                            <h3 class="card-title mb-5">Junior Product Designer-Singapore</h3>
+                            <div class="progress mt-2 mb-3" style="height: 10px;">
+                                <div class="progress-bar" style="width: 50%;"></div>
+                            </div>
+                            <p><span>42 applied of</span> &nbsp;<span class="text-muted">70 capacity</span></p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 col-md-6 col-lg-3 mb-5 mb-sm-0">
+                    <div class="card p-4 h-100 m-4 m-sm-0 mb-5 mb-sm-0">
+                        <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center p-0 m-0">
+                            <div class="d-flex gap-3 justify-content-center align-items-center p-0 m-0">
+                                    <i class="bx bxl-stack-overflow"></i>
+                                    <h6 class="p-0 m-0">StackOverflow<br><small class="lead">2 days ago</small></h6>
+                                </div>
+                                    <span class="badge px-3 py-2">Design</span>
+                        </div>
+                        <div class="card-body mt-5 p-0 d-flex flex-column justify-content-between">
+                            <h3 class="card-title mb-5">Software Architect Java - USA</h3>
+                            <div class="progress mt-2 mb-3" style="height: 10px;">
+                                <div class="progress-bar" style="width: 50%;"></div>
+                            </div>
+                            <p><span>52 applied of</span> &nbsp;<span class="text-muted">100 capacity</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

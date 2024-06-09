@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      //       const car = {
+      //         make: "Tesla",
+      //         model: 1982,
+      //         year: 2024,
+      //         message: function () {
+      //           return (
+      //             "Car is " +
+      //             this.make +
+      //             " & Model " +
+      //             this.model +
+      //             " & Year " +
+      //             this.year
+      //           );
+      //         },
+      //       };
+
+      //       function Display(obj) {
+      //         for (var x in obj) {
+      //           document.write(x + "<br>");
+      //         }
+      //       }
+      //       Display(car);
+
+      //       document.write("<br><br>");
+      //       const Person = {
+      //         fName: "Ata",
+      //         LName: "Ur Rehman",
+      //         get fullName() {
+      //           return this.fName + " " + this.LName;
+      //         },
+      //       };
+      //       document.write(Person.fullName);
+
+      //       document.write("<br><br>");
+      //       function Book(title, author) {
+      //         this.title = title;
+      //         this.author = author;
+      //         this.display = function () {
+      //           return this.title + " Book Written By " + this.author;
+      //         };
+      //       }
+      //       const bk1 = new Book("Maths", "John");
+      //       document.write(bk1.display());
+
+      //       document.write("<br><br>");
+      //       const playList = {
+      //         title: "Makkah Songs",
+      //         song: ["makkah.com", "madina.com", "saudi.com"],
+      //       };
+      //       var i = 0;
+      //       for (var value of playList.song) {
+      //         i++;
+      //         document.write("Song" + i + ": " + value + "<br>");
+      //       }
+
+      //       document.write("<br><br>");
+      //       var playList1 = new Set(["Rock", "Hip-Hop", "Country"]);
+      //       var playList2 = new Set(["Indie", "Rock", "Pop"]);
+      //       var genres = [];
+      //       playList1.forEach((item) => {
+      //         playList2.forEach((item2) => {
+      //           if (item === item2) {
+      //             genres.push(item2);
+      //           }
+      //         });
+      //       });
+      //       document.write("Intersection of PlayList1 & PlayList2: " + genres);
+      //       console.log(genres);
+
+      //       document.write("<br><br>");
+      //       var cities = new Map([
+      //         ["Lakki", 5000],
+      //         ["Lahore", 40000],
+      //         ["Bannu", 2999],
+      //       ]);
+
+      //       for (var x of cities) {
+      //         if (x[0] === "Lakki") document.write(x);
+      //       }
+
+      //       const playlist1Genres = new Set(["Pop", "Rock", "Hip Hop"]);
+      //       const playlist2Genres = new Set(["Rock", "Country", "Indie"]);
+      //       var aa = [...playlist1Genres].filter((genre) =>
+      //         playlist2Genres.has(genre)
+      //       );
+      //       const intersection = new Set(aa);
+
+      //       console.log(intersection);
+
+      // const car1 = {
+      //     make: 'Tesla',
+      //     model: 202,
+      //     year: 2024
+      // };
+      // const car2 = {
+      //     make: 'Frari',
+      //     model: 204,
+      //     year: 2024
+      // };
+      // var car = {
+      //     ...car1, ...car2}
+      // console.log(car)
+
+      // document.write('<br><br>');
+      // const person = {
+      //     name: "Zahoor",
+      //     age:20,
+      //     gender: 'male'
+      // };
+      // const {name, age, gender} = person;
+      // document.write("Name: "+ name +" Age: "+ age +" Gender: "+gender);
+
+      // document.write('<br><br>');
+      // const make = 'farari';
+      // const model = "Honda";
+      // const year = 2024;
+      // const carr = {make, model, year};
+      // console.log(carr);
+
+      // document.write('<br><br>');
+      // const car3 = {
+      //     ...car
+      // };
+
+      // document.write('<br><br>');
+      // //False Way
+      // // const Server = {
+      // //     apiKey: 22222,
+      // //     maxRequests: 34
+      // // };
+      // // Object.freeze(Server);
+      // // Server.apiKey = 33;
+
+      // //Correct Way
+      // const configuration = Object.freeze({apiKey: 2239939, maxRequest: 23});
+      // configuration.apiKey = 838;
+      // // document.write(Server.apiKey);
+
+      // document.write('<br><br>');
+      // const user = {
+      //     userFullName: 'Java',
+      //     email: 'java@gmail.com'
+      // };
+      // Object.seal(user);
+      // document.write(user.name)
+
+      // document.write('<br><br>');
+      // const student = {
+      //     name: 'Ahmad',
+      //     grade: '3.5 CGPA',
+      //     subject: 'Bsc SW'
+      // };
+      // for(var [key, value] of Object.entries(student)){
+      //     document.write('Key: '+key +" Value: "+ value +"<br>");
+      // }
+
+      // document.write('<br><br>');
+      // const Profile = {
+      //     username: 'Jsmane',
+      //     email: "Jasmane@gmail.com"
+      // };
+      // Object.assign(Profile.email = '88');  //deep way to change property value
+      // // Profile.email = 'aa';
+      // // var aa = Object.assign({}, Profile, {email: 'aaa@gmail.com'});  // shalow way to change value
+      // // document.write(aa.email);
+      // document.write(Profile.email);
+
+      // document.write('<br><br>');
+      // const books = {
+      //     book1: {title:'Maths', author:'John', genre:'Uk'},
+      //     book2: {title:'English', author:'Aford', genre:'Us'},
+      //     book3: {title:'Computer', author:'Faghan', genre:'Uk'},
+      //     book4: {title:'Urdu', author:'Johar', genre:'Pak'},
+      // };
+
+      // const specific = Object.fromEntries(
+      //     Object.entries(books).filter(([key, book]) => book.genre === 'Uk')
+      // );
+      // console.log(specific);
+
+      // const person = {
+      //     name: 'Azhar',
+      //     age: 40,
+      //     address: 'Lakki Marwat'
+      // };
+      // const person1 = {...person};
+      // const person2 = Object.assign(person);
+      // console.log(person2);
+
+      // document.write('<br><br>');
+      // var serialize =JSON.stringify(person);
+      // var deserialize = JSON.parse(serialize);
+      // console.log(typeof deserialize);
+
+      // document.write('<br><br>');
+      // const Animal = {
+      //     type: 'General',
+      //     sound: 'Noice'
+      // };
+      // var dog = Object.create(Animal);
+      // dog.type = 'DOG';
+      // dog.sound = 'Meduim';
+
+      // document.write('<br><br>');
+      // const temp = {
+      //     temp_C: 34,
+      //     get temp_F(){
+      //         return 5/9*(this.temp_C - 32);
+      //     }
+      // }
+      // console.log(temp.temp_F);
+
+      // document.write('<br><br>');
+      // function BankAccount(initialBalance) {
+      //   let balance = initialBalance;
+
+      //   return {
+      //     getBalance: () => balance,
+      //     deposit: (amount) => {
+      //       balance += amount;
+      //     },
+      //     withdraw: (amount) => {
+      //       if (amount <= balance) {
+      //         balance -= amount;
+      //       } else {
+      //         console.log('Insufficient funds.');
+      //       }
+      //     },
+      //   };
+      // }
+
+      // const account = BankAccount(1000);
+      // console.log(account)
+
+      // document.write('<br><br>');
+      // const car = {
+      //   make: 'Honda',
+      //   model: 'Civic',
+      //   year: 2024
+      // };
+      // for(var [key, value] in car){
+      //   document.write(key+ ' '+ value +'<br>');
+      // }
+
+      // document.write('<br><br>');
+      // const Computer = {
+      //   name: 'dell',
+      //   ram: 4,
+      //   core: 'i5'
+      // };
+      // for(var [key, value] of Object.entries(Computer)){
+      //   document.write(key+ ' '+ value +'<br>');
+      // }
+
+      // document.write('<br><br>');
+      // const fruite = {
+      //   name: 'Banana',
+      //   quantity: 45
+      // };
+      // for(var [key, value] of Object.entries(fruite)){
+      //   document.write(key+ ' '+ value +'<br>');
+      // }
+
+      // document.write('<br><br>');
+      // const name = {
+      //   n1: 'A',
+      //   n2: 'B'
+      // };
+      // const name1 = {...name};
+      // name1.n1 = 'kkk';
+      // delete name1.n1;
+      // document.write(name1.n1+ ' '+ name.n1);
+
+      // "use strict";
+
+      // const configuration = Object.freeze({ apiKey: 2239939, maxRequest: 23 });
+
+      // // This will throw a TypeError in strict mode
+      // configuration.apiKey = 838;
+      // configuration.aa =3;
+      // console.log(configuration)
+
+      // const car1 = {
+      // name: 'honda',
+      // type: {a:1, b:3}
+      // };
+      // const car2 = {
+      // name: 'honda',
+      // type: {a:1, b:3}
+      // };
+      // var check;
+      // check = JSON.stringify(car1) === JSON.stringify(car2);
+
+      // if(check){
+      //   alert('true'+ typeof car1);
+
+      // }
+
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+      Person.prototype.sayHello = function () {
+        document.write(
+          "I am " + this.name + " & I am " + this.age + " years old."
+        );
+      };
+      function Student(name, age, grade) {
+        Person.call(this, name, age);
+        this.grade = grade;
+      }
+      Student.prototype = Object.create(Person.prototype);
+      Student.prototype.sayHello = function () {
+        document.write(
+          "<br>I am " +
+            this.name +
+            " & I am " +
+            this.age +
+            " years old." +
+            " My Grade: " +
+            this.grade
+        );
+      };
+      var per = new Person("Ashgar", 45);
+      per.sayHello();
+      var st = new Student("Anwar", 34, "A1");
+      st.sayHello();
+      // document.write(Student.name)
+      // Student.grade = 40;
+      // document.write(Student);
+
+      document.write("<br><br>");
+      function bookShop(title, author, year) {
+        return { title: title, author: author, year: year };
+      }
+      var book1 = bookShop("Maths", "Jordan", 2024);
+      console.log(book1);
+
+      document.write("<br><br>");
+      const comp_part1 = {
+        title: "Dell",
+        core: "i5",
+      };
+      const comp_part2 = {
+        RAM: "8GB",
+        generation: "7th",
+      };
+      const Computer = { ...comp_part1, ...comp_part2 };
+      console.log(Computer);
+
+      document.write("<br><br>");
+      function Profile(name, id) {
+        var u_name = name;
+        var u_id = id;
+        this.get = function () {
+          console.log(`My name is ${u_name} & ID ${u_id}`);
+        };
+        this.set = function (name, id) {
+          u_name = name;
+          u_id = id;
+        };
+      }
+      var us1 = new Profile("javaid", 3333);
+      us1.set("aaa", 33);
+      console.log(us1.get());
+    </script>
+  </body>
+</html>

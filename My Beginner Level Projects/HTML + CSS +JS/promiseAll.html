@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const h1 = document.createElement("h1");
+    const content = document.createTextNode("Today is a Promise.all Topic");
+    h1.appendChild(content);
+
+    const promise1 = new Promise(function (resolve, reject) {
+      const message = true;
+      if (message) {
+        const result = "I am succesfull";
+        resolve(result);
+      } else {
+        const error = " I am Failed";
+        reject(error);
+      }
+    });
+
+    const promise2 = new Promise(function (resolve, reject) {
+      const message = true;
+      if (message) {
+        const result = "I am succesfull";
+        resolve(result);
+      } else {
+        const error = " I am Failed";
+        reject(error);
+      }
+    });
+
+    const promise3 = new Promise(function (resolve, reject) {
+      const message = true;
+      if (message) {
+        const result = "I am succesfull";
+        resolve(result);
+      } else {
+        const error = " I am Failed";
+        reject(error);
+      }
+    });
+
+    const promise4 = new Promise(function (resolve, reject) {
+      const message = false;
+      if (message) {
+        const result = "I am succesfull";
+        resolve(result);
+      } else {
+        const error = " I am Failed";
+        reject(error);
+      }
+    });
+
+    Promise.all([promise1, promise2, promise3, promise4])
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((result) => {
+        console.log(result);
+      });
+  </script>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: red;
+        }
+        .box{
+            background-color: blue;
+            width: 30%;
+            height: auto;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            gap: 2rem;
+        }
+        .section{
+            background-color: green;
+            height: 5rem;
+        }
+        body.active .box{
+            margin-left: -500px;
+        }
+        body.active .section{
+            margin-left: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>HOME</li>
+            <li>HOME</li>
+            <li>HOME</li>
+            <li>HOME</li>
+            <li>HOME</li>
+        </ul>
+    </div>
+    <div class="section">
+        <button>Side Left</button>
+    </div>
+    
+    <script>
+        var bt=document.querySelector('button');
+        bt.addEventListener('click', () => {
+            document.querySelector('body').classList.toggle('active');
+        })
+    </script>
+</body>
+</html>

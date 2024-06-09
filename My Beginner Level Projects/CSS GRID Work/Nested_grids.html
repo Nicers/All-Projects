@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Grids</title>
+    <style type="text/css">
+        .container{
+            display:grid;
+            grid-template-columns:repeat(2,250px);
+            grid-template-rows:repeat(2,150px);
+            grid-gap:10px;
+        }
+        .items1{
+          background:red;
+        }
+        .items2{
+background:yellow;
+        }
+        .items3{
+            background:green;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+            padding: 10px;
+        }
+        .items4{
+            background:blue;
+        }
+        
+        .items3 > div{
+            background-color: black;
+            color: red;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="items1">Box 1</div>
+        <div class="items2">Box 2</div>
+        <div class="items3">
+            <div class="subitems1">A</div>
+            <div class="subitems2">B</div>
+            <div class="subitems3">C</div>
+        </div>
+        <div class="items4">Box 4</div>
+           </div>
+
+</body>
+</html>

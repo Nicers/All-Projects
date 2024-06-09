@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" id="main">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parent</title>
+    <style type="text/css">
+      #parent {
+        background-color: lightsalmon;
+        width: 1200px;
+        height: 350px;
+        margin: 0 auto;
+      }
+      #inner {
+        background-color: mediumseagreen;
+        width: 1100px;
+        height: 250px;
+        margin: 30px auto 0;
+      }
+      .in {
+        width: 200px;
+        height: 120px;
+        background-color: white;
+        float: left;
+        margin: 30px auto 0 15px;
+        text-align: center;
+        line-height: 120px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <h2>Parent</h2>
+      <div id="inner">
+        <h2>Inner</h2>
+        <div class="in" id="head_child">A</div>
+        <div class="in">B</div>
+        <div class="in" id="Child-c">C</div>
+        <div class="in">D</div>
+        <div class="in">E</div>
+      </div>
+    </div>
+    <!-- <script src="parentElement_parentNode.js"></script> 
+   <script src="Children_ChildNodes.js"></script> 
+   <script src="firstchild_lastchild_element.js"></script> -->
+    <script src="">
+      var a;
+
+      //a=document.getElementById('Child-c').nextElementSibling;
+
+      //a=document.getElementById('Child-c').nextSibling;
+
+      //a=document.getElementById('Child-c').previousElementSibling;
+
+      //a=document.getElementById('Child-c').previousElementSibling.innerHTML;
+
+      document.getElementById(
+        "Child-c"
+      ).previousElementSibling.style.background = "red";
+      a = document.getElementById("Child-c").previousElementSibling.innerHTML;
+
+      /*document.getElementById('Child-c').nextElementSibling.style.background='red';
+a=document.getElementById('Child-c').nextElementSibling;*/
+
+      //a=document.getElementById('child-E').nextElementSibling;
+
+      //a=document.getElementById('child-head').previousElementSibling;
+
+      //a=document.getElementById('Child-c').previousElementSibling;
+
+      console.log(a);
+    </script>
+  </body>
+</html>

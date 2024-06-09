@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function</title>
+    <script>
+      document.write("<h2>Fuction Section</h2>");
+      function display() {
+        document.write("Hello<br>");
+      }
+      display();
+      display();
+
+      document.write("<br>");
+      document.write("<ul>");
+      function display1() {
+        document.write("<li>Ata</li><br>");
+      }
+      document.write("</ul>");
+      display1();
+      display1();
+      display1();
+      display1();
+      display1();
+      display1();
+      display1();
+
+      document.write("<h2>Function With Parameters</h2>");
+      function sum(a, b) {
+        document.write("Sum Of A and B  ------>    ", a + b);
+      }
+      sum(10, 20);
+
+      document.write("<h2>Function With Return Value</h2>");
+      function find(num) {
+        if (num % 2 == 0) {
+          return num;
+        }
+      }
+      var numy = find(20);
+      document.write("Number is Odd ---->   ", numy);
+    </script>
+  </head>
+  <body></body>
+</html>

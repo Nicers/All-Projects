@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date Methods</title>
+    <script>
+      document.write("<h2>Date Section</h2>");
+      var a = new Date();
+      document.write(a);
+      document.write("<br><br>", a.toDateString());
+      document.write("<br><br>", a.getDate());
+      document.write("<br><br>", a.getDay());
+      document.write("<br><br>", a.getMonth());
+      document.write("<br><br>", a.getFullYear());
+      document.write("<br><br>", a.getHours());
+      document.write("<br><br>", a.getMinutes());
+      document.write("<br><br>", a.getSeconds());
+      document.write("<br><br>", a.getMilliseconds());
+
+      a = new Date("aug 7 2021");
+      document.write("<br><br>", a.getMonth());
+
+      a = new Date();
+      a.setDate(20);
+      document.write("<br><br>", a);
+      a.setMonth(8);
+      document.write("<br><br>", a);
+      a.setFullYear(2021);
+      document.write("<br><br>", a);
+
+      a = new Date();
+      document.write(
+        "<br><br>Today Date  ------>  ",
+        a.getDate(),
+        "/",
+        a.getMonth(),
+        "/",
+        a.getFullYear()
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,35 @@
+
+body{
+
+    background-color:aqua;
+}
+
+label{
+    font-weight:bold;
+    margin:0 100px;        /* padding:0 100px;           if you write margin or padding then text of label bring to middle of nav bar */
+    line-height:80px;
+
+}
+
+nav{
+    height:100px;
+    width:100%;
+    background-color:rgb(0, 255, 42);
+}
+
+ul{
+    float:right;
+}
+
+nav li{
+display:inline-block;
+margin:0 16px;
+border:3px solid white;
+border-radius:8px;
+padding:8px;
+margin:8px;
+}
+
+a{
+    text-decoration:none;
+}

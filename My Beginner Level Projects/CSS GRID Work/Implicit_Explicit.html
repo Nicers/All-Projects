@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implicit And Explicit</title>
+    <style>
+        .container{
+            margin:45px auto 0;
+            width: 650px;
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,120px);
+            grid-gap: 15px;
+
+            grid-auto-rows: 80px;
+            grid-auto-flow: /*column*/row;
+            grid-auto-columns:  .5fr;
+        }
+        .o{
+            background-color: red;
+
+        }
+        .t{
+            background-color: greenyellow;
+
+        }
+        .t{
+            background-color: purple;
+
+        }
+        .th{
+            background-color: pink;
+
+        }
+        .f{
+            background-color: blue;
+
+        }
+        .fi{
+            background-color: palevioletred;
+
+        }
+        .s{
+            background-color: orange;
+
+        }
+        .se{
+            background-color: palegreen;
+
+        }
+        .e{
+            background-color: yellow;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="o">One</div>
+    <div class="t">Two</div>
+    <div class="th">Three</div>
+    <div class="f">Four</div>
+    <div class="fi">Five</div>
+    <div class="s">Six</div>
+    <div class="se">Seven</div>
+    <div class="e">Eight</div>
+    </div>
+</body>
+</html>

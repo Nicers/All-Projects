@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advance Quiz App</title>
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="all.css" />
+    <link rel="stylesheet" href="advanceQuiz.css" />
+    </head>
+  <body>
+    <div class="container-fluid h-100">
+      <div class="row h-100">
+        <div class="col d-flex justify-content-center align-items-center">
+          <div class="box rounded p-5">
+            <h1 class="pb-3 mb-4">Simple Quiz</h1>
+            <div
+              class="allBtn mt-4 d-flex flex-column gap-3 align-items-center"
+            >
+              <h4>1. Which is the largest desert in the world?</h4>
+              <div class="optionBtn d-flex flex-column gap-3 w-100">
+                <button
+                  class="py-2 rounded"
+                  id="optionBtn"
+                  onclick="checkAnswer(this)"
+                >
+                  Kalahari
+                </button>
+                <button
+                  class="py-2 rounded"
+                  id="optionBtn"
+                  onclick="checkAnswer(this)"
+                >
+                  Gobi
+                </button>
+                <button
+                  class="py-2 rounded"
+                  id="optionBtn"
+                  onclick="checkAnswer(this)"
+                >
+                  Sahara
+                </button>
+                <button
+                  class="py-2 rounded"
+                  id="optionBtn"
+                  onclick="checkAnswer(this)"
+                >
+                  Antarctica
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="advanceQuiz.js"></script>
+  </body>
+</html>

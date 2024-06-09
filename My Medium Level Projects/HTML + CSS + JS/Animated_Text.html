@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Text</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+      }
+      .text {
+        color: white;
+        width: 0ch;
+        float: left;
+        font-weight: bold;
+        font-size: 43px;
+        font-family: sans-serif;
+        animation: sample 5s steps(22) 1s infinite alternate;
+        overflow: hidden;
+        white-space: nowrap;
+        word-spacing: 10px;
+        margin-top: 400px;
+        margin-left: 550px;
+      }
+      @keyframes sample {
+        from {
+          width: 0ch;
+        }
+        to {
+          width: 26ch;
+        }
+      }
+      @keyframes crow {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .text span {
+        color: red;
+      }
+      .typing {
+        float: left;
+        color: white;
+        font-size: 45px;
+        animation: crow 0.8s linear 0s infinite;
+        font-weight: bold;
+        margin-top: 400px;
+        margin-left: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="text">I AM A <span>JUNIOR DESIGNER</span></div>
+    <div class="typing">|</div>
+  </body>
+</html>

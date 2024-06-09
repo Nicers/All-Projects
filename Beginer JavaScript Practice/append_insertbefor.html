@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Append Child And Inset Before</title>
+    <style type="text/css">
+      #one {
+        width: 1100px;
+        height: 300px;
+        background-color: tan;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: blue; margin-left: 500px">appendChild & insertBefore</h1>
+    <div id="one">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, neque
+        dolores corporis iure voluptatum sunt perspiciatis! Aliquid quasi quas
+        autem labore, ducimus quibusdam maiores suscipit esse odit ex magni
+        saepe.
+      </p>
+      <h3>Paragraphs</h3>
+    </div>
+    <script src="">
+      var a, b;
+
+      /*a=document.createElement('h2');
+b=document.createTextNode('This is Dom Text');
+a.appendChild(b);
+document.getElementById('one').appendChild(a);*/
+
+      a = document.createElement("h2");
+      b = document.createTextNode("This is DOM Text");
+      a.appendChild(b);
+      document.getElementById("one").appendChild(a);
+      var target = document.getElementById("one");
+      target.insertBefore(a, target.childNodes[0]);
+      //target.insertBefore(a,target.childNodes[2]);
+      console.log(a);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label>Enter radius of Circle </label>
+    <input type="text" id="rad" />
+    <button onclick="data()">Submit</button>
+  </body>
+  <script>
+    function data() {
+      var radius = document.getElementById("rad").value;
+      const pi = Math.PI;
+      var areaOfCircle = pi * radius ** 2;
+      document.write("Radius : ", radius);
+      document.write("<br>Area of Circle is : ", areaOfCircle);
+    }
+  </script>
+</html>

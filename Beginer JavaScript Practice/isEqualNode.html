@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>isEqualNode</title>
+  </head>
+  <body>
+    <h1 style="color: blue">isEqualNode</h1>
+    <ul id="list1">
+      <li>Mango</li>
+      <li>Banana</li>
+      <li>Orange</li>
+      <li>Grapes</li>
+    </ul>
+    <ul id="list2">
+      <li>Mango</li>
+      <li>Potato</li>
+      <li>Egg</li>
+      <li>Tomato</li>
+    </ul>
+    <script src="">
+      var a, b, c;
+      a = document.getElementById("list1").firstElementChild;
+      b = document.getElementById("list2").firstElementChild;
+      c = a.isEqualNode(b);
+      console.log(c);
+    </script>
+  </body>
+</html>

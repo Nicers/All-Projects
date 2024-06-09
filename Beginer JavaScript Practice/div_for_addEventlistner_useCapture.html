@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #outer {
+        width: 550px;
+        height: 550px;
+        margin: 0 auto;
+        background-color: lightsalmon;
+      }
+      #inner {
+        width: 250px;
+        height: 250px;
+        margin: 100px auto 0;
+        background-color: mediumorchid;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="outer">
+      <h2>Outer</h2>
+      <div id="inner">
+        <h2>Inner</h2>
+      </div>
+    </div>
+    <script src="">
+      /*document.querySelector('#inner').addEventListener('click',function(){
+    alert('Inner Div');
+});
+document.querySelector('#outer').addEventListener('click',function(){
+    alert('Outer Div');
+})*/
+
+      /*document.querySelector('#inner').addEventListener('click',function(){
+    alert('Inner Div');
+},true);
+document.querySelector('#outer').addEventListener('click',function(){
+    alert('Outer Div');
+},true);*/
+
+      document.querySelector("#inner").addEventListener(
+        "click",
+        function () {
+          alert("Inner Div");
+        },
+        false
+      );
+      document.querySelector("#outer").addEventListener(
+        "click",
+        function () {
+          alert("Outer Div");
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

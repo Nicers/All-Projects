@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Max Function</title>
+    <style>
+        .container{
+            margin-top: 100px;
+            margin-left: 50px;
+            display: grid;
+            grid-template-columns: /*max-content*/minmax(150px,300px) 1fr 1fr min-content;
+            grid-template-rows: repeat(2,minmax(150px,min-content));
+            grid-gap: 8px;
+        }
+        .o{
+            background-color: red;
+
+        }
+        .t{
+            background-color: greenyellow;
+
+        }
+        .t{
+            background-color: purple;
+
+        }
+        .th{
+            background-color: pink;
+
+        }
+        .f{
+            background-color: blue;
+
+        }
+        .fi{
+            background-color: palevioletred;
+
+        }
+        .s{
+            background-color: orange;
+
+        }
+        .se{
+            background-color: palegreen;
+
+        }
+        .e{
+            background-color: yellow;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="o">One Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic, quis.</div>
+    <div class="t">Two</div>
+    <div class="th">Three</div>
+    <div class="f">Four Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi, recusandae praesentium perspiciatis debitis veritatis quas?</div>
+    <div class="fi">Five</div>
+    <div class="s">Six Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore tempora excepturi harum nobis a temporibus.</div>
+    <div class="se">Seven</div>
+    <div class="e">Eight</div>
+    </div>
+</body>
+</html>

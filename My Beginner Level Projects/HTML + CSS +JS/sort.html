@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    
+    <script>
+        var myarray = [34,12,67,1,0,9,66];
+        // document.write('sort() ---> Array is Sorted but also original array is sorted : '+myarray.sort()); // sort() sort the original
+        // document.write('<br>Original Array is Sorted:'+myarray); 
+        // document.write('<br><br>toSorted() ---> Array is Sorted but only copy array is sorted : '+myarray.toSorted());
+        // document.write('<br>Original Array is not Sorted:'+myarray);
+        
+        // document.write('<br><br><br><br>reverse() ---> Array is reversed but also original array is reversed : '+myarray.reverse());
+        // document.write('<br>Original Array is reversed:'+myarray);
+        // document.write('<br><br>toReversed() ---> Array is reversed but only copy array is reversed : '+myarray.toReversed());
+        // document.write('<br>Original Array is not reversed:'+myarray);
+
+        // document.write('<br><br>pop() ---> Array is last element is deleted: '+myarray.pop());
+        // document.write('<br>Original Array :'+myarray);
+        
+        // document.write('<br><br>push() ---> Array into element is inserted in last: '+myarray.push(45));
+        // document.write('<br>Original Array :'+myarray);
+        
+        // document.write('<br><br>shift() ---> Array is first element is deleted: '+myarray.shift());
+        // document.write('<br>Original Array :'+myarray);
+        
+        // document.write('<br><br>unshift() ---> Array into element is inserted in first index: '+myarray.unshift(77));
+        // document.write('<br>Original Array :'+ myarray);
+
+        // var bc = myarray.join(','); 
+        // document.write('<br><br>join() ---> Array : '+ bc + 'type of'+ typeof bc);
+
+        // document.write('<br><br>slice() ---> Array : '+ myarray.slice(0,-1));
+
+        // document.write('<br><br>splice() ---> Array : '+ myarray.splice(0,myarray.length));
+
+        // var a = myarray.includes(67);
+        // document.write('<br><br>include() ---> Array : '+ a);
+
+        // var some = myarray.some(check);
+        // function check(value, index, array){
+        //     return value>23;
+        // }
+        // document.write('<br><br>some() ---> Array : '+ some);
+        
+        // var every = myarray.every(check2);
+        // function check2(value, index, array){
+        //     return value>23;
+        // }
+        // document.write('<br><br>every() ---> Array : '+ every);
+
+        // var filter = myarray.filter(check2);
+        // function check2(value, index, array){
+        //     return value>23;
+        // }
+        // document.write('<br><br>filter() ---> Array : '+ filter);
+
+        document.write('<br><br>fill() ---> Array into element is inserted in last: '+myarray.fill(1));
+        document.write('<br>Original Array :'+myarray);
+    </script>
+</body>
+</html>

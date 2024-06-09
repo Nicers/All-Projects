@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    
+
+    <script>
+        function addNumbers(num1, num2){
+            return num1+num2;
+        }
+        document.write(addNumbers(34,1));
+
+        document.write('<br><br>');
+        var product = function(num1, num2){
+            return num1*num2;
+        }
+        document.write(product(3,5));
+
+        document.write('<br><br>');
+        function outerFunction(name, age){
+            var message = function(){
+                document.write('Age: '+ age +" Name: "+name);
+            }
+        }
+        outerFunction('aa', 5);
+        outerFunction.message;
+    </script>
+</body>
+</html>

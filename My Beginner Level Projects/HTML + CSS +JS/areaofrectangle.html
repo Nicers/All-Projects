@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Calculating area of Rectangle</h1>
+    <label for="">Enter Length </label
+    ><input type="text" id="len" /><br /><br />
+    <label for="">Enter Width </label><input type="text" id="wid" /><br /><br />
+    <button onclick="data()">Submit</button>
+  </body>
+  <script>
+    function data() {
+      var length = document.getElementById("len").value;
+      var width = document.getElementById("wid").value;
+      Math.floor(length, width);
+      var area;
+      if (isNaN(length) || isNaN(width)) {
+        alert("Enter valid Values");
+      } else {
+        area = length * width;
+        document.write("Area of Rectangle : ", area);
+      }
+    }
+  </script>
+</html>

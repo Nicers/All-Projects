@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Events</title>
+    <style></style>
+  </head>
+  <body>
+    <form action="" onsubmit="submitfunction()">
+      <label for="">Name</label
+      ><input
+        type="text"
+        id="fname"
+        onfocus="focusfunction(this)"
+        onblur="blurfunction(this)"
+        oninput="inputfunction(this)"
+        onchange="changefunction(this)"
+        onselect="selectfunction(this)"
+        oninvalid="alert('Please fill the Form Complete')"
+        required
+      /><br /><br />
+      <label for="">Password</label
+      ><input
+        type="password"
+        onfocus="focusfunction(this)"
+        onblur="blurfunction(this)"
+        oninput="inputfunction(this)"
+        onchange="changefunction(this)"
+        onselect="selectfunction(this)"
+        oninvalid="alert('Please fill the Form Complete')"
+        required
+      /><br /><br />
+      <select
+        name=""
+        id=""
+        onfocus="focusfunction(this)"
+        onblur="blurfunction(this)"
+        oninput="inputfunction(this)"
+        onchange="changefunction(this)"
+        onselect="selectfunction(this)"
+        oninvalid="alert('Please fill the Form Complete')"
+        required
+      >
+        <option value="Pakistan">Pakistan</option>
+        <option value="Bangladesh">Bangladesh</option>
+        <option value="India">India</option>
+        <option value="Nigeria">Nigeria</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+    <div style="border: 2px solid blue; margin-top: 50px" id="input"></div>
+    <script>
+      function focusfunction(element) {
+        //document.getElementById().style.background='red';
+        element.style.background = "lime";
+      }
+      function blurfunction(element) {
+        element.style.background = "";
+      }
+      function inputfunction(element) {
+        var x = element.value;
+        document.getElementById("input").innerHTML = x;
+      }
+      function changefunction(element) {
+        var x = element.value;
+        document.getElementById("input").innerHTML = x;
+      }
+      function selectfunction(element) {
+        alert("You Selected Some Text");
+      }
+      function submitfunction(element) {
+        alert("Form Successfully Submited");
+      }
+    </script>
+  </body>
+</html>

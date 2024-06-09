@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>insertAdjacent Methods</title>
+    <style type="text/css">
+      #one {
+        width: 1100px;
+        height: 300px;
+        background-color: tan;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: blue; margin-left: 500px">
+      insertAdjacentElement,HTML,TEXT
+    </h1>
+    <div id="one">
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum, neque
+        dolores corporis iure voluptatum sunt perspiciatis! Aliquid quasi quas
+        autem labore, ducimus quibusdam maiores suscipit esse odit ex magni
+        saepe.
+      </p>
+      <h3>Paragraphs</h3>
+    </div>
+    <script src="">
+      var a, b, target;
+      /*a=document.createElement('h2');
+b=document.createTextNode('This is DOM Text');
+a.appendChild(b);
+target=document.getElementById('one');
+//target.insertAdjacentElement('beforebegin',a);
+//target.insertAdjacentElement('afterbegin',a);
+//target.insertAdjacentElement('afterend',a);
+target.insertAdjacentElement('beforeend',a);*/
+
+      /*target=document.getElementById('one');
+a='<h2>This is Dom Text</h2>';
+target.insertAdjacentHTML('afterbegin',a);
+//target.insertAdjacentHTML('afterend/beforebegin/beforeend',a);*/
+
+      target = document.getElementById("one");
+      b = "This is Dom Text";
+      target.insertAdjacentText("afterbegin", b);
+      //target.insertAdjacentText('afterend/beforeend/beforebegin',b);
+      console.log(b);
+    </script>
+  </body>
+</html>

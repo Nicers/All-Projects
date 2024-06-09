@@ -1,0 +1,38 @@
+body{
+    margin:0;
+    padding:0;
+    background:url(aa.jpg);
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+   background-size:cover;*/
+   background-position:center;
+   font-family:sans-serif;
+
+}
+
+.ata{
+    text-align:center;
+    font-size:40px;
+    
+}
+
+.for{
+    background:black;
+    width:350px;
+    height:320px;
+    padding:70px 30px;
+    position:absolute;
+    transform:translate(-50% ,-50%);
+    top:50%;
+    left:50%;
+}
+
+.mg{
+    width:100px;
+    height:100px;
+    left:calc(50% , -50px);
+    border-radius:50%;
+    top:-50px;
+    position:absolute;
+    
+}

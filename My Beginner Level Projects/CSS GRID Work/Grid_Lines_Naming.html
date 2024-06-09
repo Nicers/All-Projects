@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Grid Lines Naming</title>
+    <style>
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, [col-start] 1fr [col-end]);
+    grid-template-rows:[header-start] 120px [header-end menu-start] 60px[menu-end box-start] 100px [box-end content-start] 400px [content-end footer-start] 50px [footer-end];
+    grid-gap: 15px;
+    width: 720px;
+    margin: 45px auto 0;
+}
+        .header{
+            background-color: red;
+            grid-row:header-start/header-end;
+            grid-column: col-start 1 / col-end 3;
+        }
+        .menu{
+background-color: yellowgreen;
+grid-row: menu-start / menu-end;
+grid-column: col-start 1/ col-end 3;
+        }
+        .box2{
+            background-color: palevioletred;
+        }
+        .box1{
+            background-color: purple;
+        }
+        .sidebar{
+            background-color: blue;
+            grid-row: box-start / content-end;
+        }
+        .content{
+            background-color: aquamarine;
+            grid-row: content-start / content-end;
+            grid-column: col-start 1/ col-end 2;
+        }
+        .footer{
+            background-color: goldenrod;
+            grid-row: footer-start / footer-end;
+            grid-column: 1/-1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="header">Header</div>
+    <div class="menu">Menu</div>
+    <div class="box1">Box 1</div>
+    <div class="box2">Box 2</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

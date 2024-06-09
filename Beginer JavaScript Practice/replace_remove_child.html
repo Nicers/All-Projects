@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Remove and Replace Child</title>
+  </head>
+  <body>
+    <h1 style="color: blue; margin-left: 400px">replaceChild & removeChild</h1>
+    <ul id="list">
+      <li>Milk</li>
+      <li>Mango</li>
+      <li>Grapes</li>
+      <li>Banana</li>
+    </ul>
+    <script src="">
+      var a, b, oldElement, target;
+
+      /*a=document.createElement('li');
+b=document.createTextNode('This is changed text');
+a.appendChild(b);
+target=document.getElementById('list');
+oldElement=target.children[1];
+target.replaceChild(a,oldElement);*/
+
+      target = document.getElementById("list");
+      oldElement = target.children[0];
+      target.removeChild(oldElement);
+      console.log(oldElement);
+    </script>
+  </body>
+</html>

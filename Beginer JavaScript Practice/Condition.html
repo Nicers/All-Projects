@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Condition</title>
+    <script>
+      document.write("<h2>IF Condition Section</h2>");
+      var a = 30;
+      var b = 50;
+      if (b > a) {
+        document.write("B is Greater than A");
+      }
+
+      document.write("<h2>IF else Condition Section</h2>");
+      if (a > b) {
+        document.write("A is Greater than B");
+      } else {
+        document.write("A is Lesser than B");
+      }
+
+      document.write("<h2>IF else IF else Condition Section</h2>");
+      a = 30;
+      b = 45;
+      if (a % 2 == 0) {
+        document.write("a is Even Number");
+      } else if (b % 2 != 0) {
+        document.write("b is Odd");
+      } else {
+        document.write("b is Even");
+      }
+
+      document.write("<h2>Ternary Operator</h2>");
+      a = 10;
+      b = 20;
+      var c;
+      c = a > b ? "A is Greater than B" : "A is lesser than B";
+      document.write(c);
+
+      document.write("<h2>Switch Case Condition</h2>");
+      day = 1;
+      switch (day) {
+        case 0:
+          document.write("Today is Monday");
+          break;
+        case 1:
+          document.write("Today is Tuesday");
+          break;
+        case 2:
+          document.write("Today is Wednesday");
+          break;
+        case 3:
+          document.write("Today is Thursday");
+          break;
+        default:
+          document.write("Invalid Value");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

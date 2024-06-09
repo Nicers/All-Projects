@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DateComparison</title>
+</head>
+<body>
+    
+
+    <script>
+        var date1 = '2024/01/30';
+        var date2 = '2021/01/30';
+        function DateComparison(dat1, dat2){
+            var a  = new Date(dat1);
+            var b  = new Date(dat2);
+
+            if(a>b){
+                document.write(a.getFullYear() + ' is greater than ' + b.getFullYear());
+            }
+            else
+            if(a < b){
+                document.write(a.getFullYear() + ' is smaller than ' + b.getFullYear());
+            }
+            else{
+                document.write('Both are equal');
+            }
+        }
+        DateComparison(date1, date2);
+    </script>
+</body>
+</html>

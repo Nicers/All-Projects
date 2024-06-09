@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple Calculation</h1>
+</body>
+<script>
+    var num1=parseInt(prompt('Enter a Number1'));
+    var num2=parseInt(prompt('Enter a Number2'));
+    var sum,division, subtraction,product;
+    function Calculation(num1,num2){
+        sum=num1+num2;
+        division=num1/num2;
+        subtraction=num1-num2;
+        product=num1*num2;
+        document.write(`Sum of two numbers ${num1}&${num2}  =  ${sum}`);
+        document.write(`<br>Product of two numbers ${num1}&${num2}  =   ${product}`);
+        document.write(`<br>Division of two numbers ${num1}&${num2}  =  ${division}`);
+        document.write(`<br>subtraction of two numbers ${num1}&${num2}  =  ${subtraction}`);
+    }
+Calculation(num1,num2);
+</script>
+</html>

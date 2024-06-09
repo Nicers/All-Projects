@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiple text hover animation</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        overflow: hidden;
+      }
+      .container {
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        /* display: flex;
+            flex-direction: column; */
+      }
+      .box {
+        border-bottom: 2px solid white;
+        padding-top: 1.5rem;
+        padding-bottom: 0.5rem;
+        overflow: hidden;
+      }
+      h1 {
+        color: white;
+      }
+      .cursor {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        position: absolute;
+        overflow: hidden;
+        transition: 0.1s all linear;
+      }
+      .cursor img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+        display: none;
+        mix-blend-mode: difference;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h1>Rooh Ullah</h1>
+      </div>
+      <div class="box">
+        <h1>Jawad</h1>
+      </div>
+      <div class="box">
+        <h1>Najib</h1>
+      </div>
+      <div class="box">
+        <h1>Daniyal</h1>
+      </div>
+
+      <div class="cursor">
+        <img src="a.jpg" alt="" class="imag" />
+      </div>
+    </div>
+
+    <script>
+      var box = document.querySelectorAll(".box");
+      var image = document.querySelector(".imag");
+      var cursor = document.querySelector(".cursor");
+
+        box[0].addEventListener("mousemove", (dets) => {
+            image.src = "a.jpg";
+          image.style.display = "block";
+          cursor.style.left = dets.x + "px";
+          cursor.style.top = dets.y + "px";
+        });
+        box[0].addEventListener("mouseleave", () => {
+          image.style.display = "none";
+        });
+
+        box[1].addEventListener("mousemove", (dets) => {
+            image.src = "imran2.jpg";
+          image.style.display = "block";
+          cursor.style.left = dets.x + "px";
+          cursor.style.top = dets.y + "px";
+        });
+        box[1].addEventListener("mouseleave", () => {
+          image.style.display = "none";
+        });
+
+        box[2].addEventListener("mousemove", (dets) => {
+            image.src = "imran3.jpg";
+          image.style.display = "block";
+          cursor.style.left = dets.x + "px";
+          cursor.style.top = dets.y + "px";
+        });
+        box[2].addEventListener("mouseleave", () => {
+          image.style.display = "none";
+        });
+
+        box[3].addEventListener("mousemove", (dets) => {
+            image.src = "imran4.jpg";
+          image.style.display = "block";
+          cursor.style.left = dets.x + "px";
+          cursor.style.top = dets.y + "px";
+        });
+        box[3].addEventListener("mouseleave", () => {
+          image.style.display = "none";
+        });
+     
+    </script>
+  </body>
+</html>

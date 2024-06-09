@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const h1 = document.createElement("h1");
+    const content = document.createTextNode(
+      "Today is a javascript Promise Topic"
+    );
+    h1.appendChild(content);
+    const bod = document.body;
+    bod.appendChild(h1);
+    alert(h1);
+
+    // const mypromise = new Promise(function(resolve, reject){
+    //     const message=true;
+    //     if(message){
+    //         const result="Promise Successfull";
+    //         resolve(result);
+    //     }
+    //     else{
+    //         const error="I am Failed";
+    //         reject(error);
+    //     }
+    // });
+
+    // mypromise.then(result => {
+    //     console.log(result);
+    // })
+    // .catch(result => {
+    //     console.log(result);
+    // })
+
+    function data(message) {
+      const mypromise = new Promise(function (resolve, reject) {
+        console.log("Fetching Data after 3 second Please Wait...");
+        setTimeout(() => {
+          if (message) {
+            const result = "Promise Successfull";
+            resolve(result);
+          } else {
+            const error = "I am Failed";
+            reject(error);
+          }
+        }, 3000);
+      });
+
+      mypromise
+        .then((result) => {
+          alert("Please Check Console!");
+          console.log(result);
+        })
+        .catch((result) => {
+          alert("Please Check Console!");
+          console.log(result);
+        });
+    }
+    data(true);
+  </script>
+</html>
