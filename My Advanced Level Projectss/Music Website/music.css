@@ -1,0 +1,480 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+:root {
+  --white: #fff;
+}
+
+
+/***************     LOADER    **************/
+#loader{
+  background: white url(images/loader.gif) no-repeat center center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+}
+
+
+/***************     HEADER    **************/
+header {
+  background-image: url(images/banner2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: auto;
+  border-bottom: 0.1px solid rgb(173, 171, 171);
+}
+.sidebar {
+  background-color: #8317cf;
+  color: var(--white);
+  height: 100vh;
+  width: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  transition: width 0.7s ease-out;
+}
+.sidebar-show {
+  width: 230px;
+}
+.sidebar a {
+  font-size: 20px;
+  cursor: pointer;
+  padding-left: 2rem;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+.sidebar a:hover {
+  color: #99146d;
+}
+.sidebar i {
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+}
+.sidebar i:hover {
+  color: #99146d;
+}
+/*----------->  Header(Horizontal)  */
+.horizontal i {
+  color: black;
+}
+.horizontal img {
+  cursor: pointer;
+}
+.horizontal a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+.horizontal a:hover {
+  color: white;
+}
+/*----------->  Header(below Navbar)  */
+.nav2-section h1 {
+  font-size: 60px;
+}
+.nav2-section button {
+  background-color: white;
+  transition: background-color 1s ease;
+  font-size: 18px;
+  font-weight: 500;
+  width: fit-content;
+}
+.nav2-section button:hover {
+  color: white;
+  background-color: #a235f0;
+}
+.image img {
+  width: 90%;
+  height: auto;
+}
+/***************     HEADER Media Query    **************/
+@media only screen and (max-width: 575px) {
+  #logo {
+    width: 140px;
+    height: auto;
+  }
+}
+
+/***************     SERVICES    **************/
+.title {
+  font-size: 45px;
+  font-weight: 700;
+}
+.title-sec {
+  font-weight: 500;
+  color: rgb(192, 189, 189);
+}
+.service {
+  background-color: #99146d;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service img {
+  max-width: 100%;
+  height: auto;
+}
+
+/***************     ABOUT    **************/
+.about {
+  background-color: #8317cf;
+  color: white;
+}
+.about button:hover {
+  color: white;
+  background-color: #99146d;
+}
+.about button {
+  background-color: white;
+  transition: background-color 1s ease;
+  font-size: 18px;
+  font-weight: 500;
+  width: fit-content;
+  outline: none;
+  border: none;
+}
+.about img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8%;
+}
+.about p {
+  font-size: 17px;
+}
+
+/***************     OUR MICS    **************/
+.mic_image {
+  position: relative;
+}
+.mic_image img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border-color: transparent;
+  border-width: 5px;
+  border-style: solid;
+  background-image: linear-gradient(
+    to bottom,
+    red 0%,
+    red 50%,
+    blue 50%,
+    blue 100%
+  );
+}
+.mic_image::after {
+  background-color: rgba(227, 219, 219, 0.7);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  font-family: "Font Awesome 5 Free";
+  content: "\f002";
+  font-weight: bolder;
+  font-size: 25px;
+  color: #8317cf;
+  transition: all 0.5s ease;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mic_image:hover::after {
+  transform: scale(1);
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  text-align: center;
+}
+
+/***************     Testimonial    **************/
+.testimonial {
+  background-color: #8317cf;
+  /* height: 50rem; */
+}
+.test-header {
+  width: 70%;
+}
+.test-title {
+  font-size: 45px;
+  font-weight: 700;
+}
+.test-sec {
+  font-size: 18px;
+}
+/*----------->  Testimonial(Card Template)  */
+.all-card {
+  width: 74%;
+  height: 23rem;
+  overflow: hidden;
+}
+.all-card-inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.all-card-inner::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.test-card1 {
+  width: 100%;
+  height: 12rem;
+  float: left;
+  clear: both;
+  margin-right: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: none;
+  right: 100%;
+  margin-bottom: 20rem;
+}
+.card_active,
+.card_next_pos {
+  display: block;
+  right: 0%;
+  /* margin-right: 0%; */
+}
+.card_next_pos {
+  left: 100%;
+}
+.card_next {
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+}
+.test-card1 .card1 {
+  width: 0;
+  height: 0;
+  border-left: 6vh solid transparent;
+  border-right: 8vh solid transparent;
+  border-bottom: 11vh solid white;
+}
+.test-card1 .card2 {
+  background-color: white;
+  border-radius: 70px;
+  width: 100%;
+  padding: 2.2rem;
+}
+.test-card1 p {
+  font-size: 18px;
+}
+.card2 img {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 8px;
+}
+.card2 #test-img {
+  align-self: flex-end;
+}
+.test-control {
+  position: relative;
+}
+.test-control input[type="radio"] {
+  display: none;
+}
+.test-control .control1 .slide-control {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  background-color: white;
+  cursor: pointer;
+}
+
+/**** JS CLASSES ****/
+.labels {
+  background-color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  cursor: pointer;
+}
+/***************     Testimonial(card2) Media Query    **************/
+@media only screen and (max-width: 800px) and (min-width: 700px) {
+  .all-card {
+    width: 74%;
+    height: 26rem;
+    padding-right: 2rem;
+  }  
+  .test-card1 {
+    width: 90%;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 15rem;
+  }
+  .test-control{
+    margin-top: 1.5rem;
+  }
+}
+@media only screen and (max-width: 700px) and (min-width:600px) {
+  .all-card{
+    height: 29rem;  
+  }
+  .test-card1{
+    width: 90%;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 20rem;
+  }
+}
+@media only screen and (max-width: 600px) and (min-width:500px) {
+  .all-card{
+    height: 34rem;  
+  }
+  .test-card1{
+    width: 90%;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 25rem;
+  }
+}
+@media only screen and (max-width: 500px) and (min-width:400px) {
+  .all-card{
+    height: 41rem;  
+  }
+  .test-card1{
+    width: 90%;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 30rem;
+  }
+}
+@media only screen and (max-width: 400px) and (min-width:300px) {
+  .all-card{
+    height: 51rem;  
+  }
+  .test-card1{
+    width: 90%;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 55rem;
+  }
+}
+/***************     CONTACT    **************/
+.contact .title-contact {
+  font-size: 18px;
+}
+.contact .form input,
+textarea {
+  border: none;
+  color: rgb(188, 187, 187);
+  background-color: rgb(223, 219, 219);
+  padding-left: 1rem;
+  outline: none;
+  font-size: 18px;
+  width: 100%;
+}
+.contact .form textarea {
+  width: 100%;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact .form input {
+  height: 4.3rem;
+}
+.contact .form button {
+  padding-left: 5.5rem;
+  padding-right: 5.5rem;
+  height: 4rem;
+  border: none;
+  outline: none;
+  font-size: 19px;
+  margin-top: 1.7rem;
+}
+
+/***************     FOOTER    **************/
+footer::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  background: url(images/footer.jpg);
+  height: 251px;
+  top: -130px;
+  background-size: 100% 100%;
+  background-position: center;
+}
+footer {
+  background: #450275;
+  color: white;
+  padding-top: 9rem;
+  padding-bottom: 3rem;
+  position: relative;
+}
+footer h1 {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+}
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer a:hover {
+  color: #ff0000;
+}
+footer img {
+  position: absolute;
+  /* left: 0; */
+  top: 70px;
+}
+
+.news input,
+button {
+  border: none;
+  outline: none;
+  height: 4rem;
+}
+.news input {
+  font-size: 18px;
+  padding-left: 1rem;
+  width: 100%;
+  color: white;
+  background-color: rgb(223, 219, 219);
+}
+.news button {
+  color: white;
+  background-color: red;
+  font-size: 18px;
+  transition: background-color 0.5s;
+  width: fit-content;
+}
+.news button:hover {
+  background-color: #99146d;
+}
+footer i {
+  font-size: 26px;
+}
