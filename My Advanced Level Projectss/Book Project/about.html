@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/regular.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css">
+    <!-- <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+   <style>
+        .header a {
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+            transition: all .5s;
+        }
+
+        .header ul a:hover {
+            text-decoration: underline;
+            text-underline-offset: 10px;
+            color: black;
+
+        }
+
+        .search button {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="preloader"></div>
+
+
+    <header class="header py-3">
+        <div class="container-fluid px-3 px-md-4">
+            <div class="row">
+                <div class="col-3 col-md-2 d-flex justify-content-center align-items-center">
+                    <div class="logo">
+                        <img src="images/logo.png" onclick="window.location.href='index.html'" alt="Your Logo">
+                    </div>
+                </div>
+                <div class="col-6 col-md-8 d-flex justify-content-center align-items-center" id="search_in">
+                    <ul class="d-flex gap-3 gap-lg-5 m-0 p-0" id="ull">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
+                        <li><a href="book.html">BOOKS</a></li>
+                        <li><a href="project.html">PROJECTS</a></li>
+                        <li><a href="contact.html">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <div class="col-3 col-md-2 d-flex justify-content-md-center justify-content-end align-items-center"
+                    id="tab_in">
+                    <div class="search w-100">
+                        <input type="search" placeholder="Search here!" class="ps-3 w-75">
+                        <button class="search-button w-25"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="about py-5" style="background-color: black;">
+        <div class="container-fluid px-4 pb-5">
+            <div class="row pb-5">
+                <div class="col-12">
+                    <div class="box pt-4 w-100 d-flex flex-column justify-content-center align-items-center">
+                        <div class="title d-flex flex-column align-items-center">
+                            <h1>ABOUT</h1><img src="images/line.png" alt="">
+                        </div>
+                        <div class="box1 d-md-flex mt-5 py-5 p-3 p-md-5">
+                            <img src="images/about.jpg" alt="" class="mb-4">
+                            <div
+                                class="about-content d-flex flex-column align-items-center align-items-md-start ps-md-5 w-100">
+                                <p>We are a team of book lovers who gather an excellent collection of books for people
+                                    of all ages.
+                                    We really like stories, and we want to share books that make you think, learn, and
+                                    have fun. We
+                                    started because we believe stories help people's imaginations and love for reading
+                                    grow. We want
+                                    people who love books to feel at home here, where stories become real and words are
+                                    like magic.
+                                    Come with us and enjoy the wonderful world of books!</p>
+                                <button class="mt-2 px-5 w-auto" onclick="window.location.href='about.html'">Read
+                                    More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="footer py-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <div class="f-link mb-3">
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://wa.me/03404556573" blank=""><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                    <p>Copyright © 2023 All Rights Reserved</p>
+                    <p>Designed By <a href="https://www.linkedin.com/in/ata-ur-rehman-nicer/" id="design">Ata Ur
+                            Rehman</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="book.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
