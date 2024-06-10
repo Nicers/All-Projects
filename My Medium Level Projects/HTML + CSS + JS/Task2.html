@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Task - 2</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+        background-color: brown;
+        overflow: hidden;
+      }
+
+      .task {
+        height: 100vh;
+      }
+
+      .data {
+        background-color: mediumspringgreen;
+        height: auto;
+        border-radius: 10px;
+        width: 50%;
+      }
+
+      button {
+        background-color: black;
+        border-radius: 10px;
+        font-size: 18px;
+        color: white;
+        width: fit-content;
+      }
+
+      textarea {
+        width: 100%;
+        height: 9rem;
+        font-size: 23px;
+        margin-top: 3rem;
+        border: 3px solid red;
+        border-radius: 5px;
+        color: red;
+      }
+
+      textarea::placeholder {
+        color: red;
+      }
+
+      .pre_tag {
+        background-color: white;
+        border-radius: 3px;
+        font-size: 19px;
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .data {
+          width: 100%;
+          padding: 0.5rem;
+        }
+
+        textarea {
+          font-size: 16px;
+        }
+      }
+
+      @media only screen and (max-width: 400px) {
+        textarea {
+          font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="task">
+      <div class="container-fluid h-100">
+        <div class="row h-100">
+          <div
+            class="col d-flex flex-column justify-content-center align-items-center h-100"
+          >
+            <div
+              class="data py-3 py-sm-5 px-sm-3 d-flex flex-column align-items-center gap-4 gap-sm-5"
+            >
+              <textarea
+                name=""
+                id="text_data"
+                placeholder="Write Something"
+              ></textarea>
+              <button class="px-5 py-2 py-sm-3" onclick="display_Data()">
+                Print Data
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var text = document.querySelector("#text_data");
+      var all_data = document.querySelector(".data");
+
+      function updateDom(element, insert_text) {
+        var pre_tag = element;
+        pre_tag.innerHTML = "";
+        var pre1 = "";
+        var count_word = 0;
+
+        pre1 += text.value.trim();
+        pre1.trim();
+        var my = pre1.trim();
+        var array_my = pre1.split(/\s+/);
+        var total = 0;
+        var word = "test";
+
+        for (var j = 0; j < array_my.length; j++) {
+          // search a string
+          if (array_my[j].toLowerCase() == word) {
+            count_word++;
+          }
+          // count total word
+          if(array_my[j] != '.'){
+            total += 1;
+          }
+        }
+
+        pre_tag.innerHTML += "<b>Task1: Inserted Text: </b>\n" + insert_text;
+        pre_tag.innerHTML += "\n\n<b>Task2: Total words</b>: " + total;
+        pre_tag.innerHTML +=
+          `\n<b>Task3: String '${word}' is ` + count_word + " times.</b>";
+        text.value = "";
+      }
+
+      function display_Data() {
+        if (text.value == "") {
+          alert("Please Enter Something!");
+        } else {
+          var pre = document.querySelector(".pre_tag");
+
+          if (pre == null) {
+            var pre_tag = document.createElement("pre");
+            pre_tag.classList.add("pre_tag");
+            all_data.prepend(pre_tag);
+
+            text.style.marginTop = "0";
+            updateDom(pre_tag, text.value);
+          } else {
+            updateDom(pre, text.value);
+          }
+        }
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
