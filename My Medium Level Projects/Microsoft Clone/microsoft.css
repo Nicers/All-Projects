@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body,html{
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/*********************         HEADER      **********************/
+/* .microsoftNav .collapse{
+  display: flex;
+  justify-content: space-between;
+} */
+.microsoftNav{
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.microsoftNav .navbar-brand img{
+  width: 108px;
+ margin-right: 2rem;
+}
+.microsoftNav .nav-item .nav-link{
+  color: #2e2e2e;
+  font-size: 13px;
+  font-weight: 400;
+}
+.microsoftNav .nav-item .nav-link:hover{
+  text-decoration: underline;
+  text-underline-offset: .3rem;
+  text-decoration-color: black;
+  text-decoration-thickness: .1rem;
+}
+.microsoftNav .nav-item .dropdown-menu{
+  background-color: black;
+  
+}
+.navbar ul ul {
+  position: absolute;
+  top: 100%;
+  display: none;
+  background-color: rgb(233, 227, 227);
+}
+
+.navbar ul ul li {
+  display: block;
+}
+
+    .carousel-indicators {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .carousel-indicators li {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        text-indent: -9999px;
+        cursor: pointer;
+        border: 1.5px solid black; 
+        border-radius: 50%;
+    }
+
+    .carousel-indicators .active {
+        background-color: black; /* Set the color you want for the active indicator */
+        border-color: black; /* Set the border color for the active indicator */
+    }
+
+
+.carousel-control-prev,
+    .carousel-control-next {
+        top: 90%;
+        filter: invert(100%);
+    }
+/* .navbar {
+    position: relative;
+    z-index: 999;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+.navbar #logo{
+    width: 108px;
+}
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar li a {
+    color: #262626;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+}
+.navbar li a:hover{
+    text-decoration: underline;
+    text-underline-offset: .3rem;
+    text-decoration-color: black;
+    text-decoration-thickness: .1rem;
+}
+
+/* Style the dropdown menu */
+/* .navbar ul ul {
+  position: absolute;
+  top: 100%;
+  display: none;
+  background-color: rgb(233, 227, 227);
+}
+
+.navbar ul ul li {
+  display: block;
+} */
+
+/* .navbar li:hover ul {
+    display: block;
+} */
+
+/* Change the background color of dropdown links on hover 
+.navbar ul ul li a:hover {
+    background-color: #555;
+} */
+
+
+
+
+/*********************         HERO SECTION      **********************/
+.slider {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+  }
+
+  .slider-content {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: none;
+    transition:all 4s;
+  }
+  
+   .slider-content:first-child{
+    display: block;
+  }
+  
+  .slider-content:nth-child(2){
+    display: none;
+  }
+  
+  .slider-content img{
+    width: 100%;
+  } 
+  .slider-text1,.slider-text2 {
+    position: absolute;
+    top: 8rem;
+    left: 6.5rem;
+    padding: 20px;
+    color: #fff;
+  }
+  .slider-text1{
+    width: 30%;
+  }
+  .slider-text2{
+    width: 37%;
+  }
+  .slider-text1,.slider-text2 h1{
+    font-size: 2.3125rem;
+    margin-bottom: 1.25rem;
+    color: black;
+    font-weight: 600;
+  }
+  .slider-text1,.slider-text2 p{
+    font-size: 16px;
+    color: black;
+    font-weight: 400;
+  }
+  .slider_btns{
+    display: flex;
+    gap: 1.8rem;
+    margin-top: 2rem;
+  }
+  .slider_btns a{
+    text-decoration: none;
+    padding: 0.625rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.125rem;
+  }
+  .slider_btns .slider_btn1{
+    background-color: #0067b8;
+    color: white;
+  }
+  .slider_btns a:nth-child(2){
+    color: black;
+  }
+  .slider_btns a:nth-child(2):hover{
+    text-decoration: underline;
+  }
+  .active {
+    display: block;
+  }
+
+  .slider_control{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    z-index: -100;
+  }
+  .slider_control i{
+    cursor: pointer;
+  }
+  .slider_control .slider_control1 i{
+    font-size: 24px;
+    font-weight: 200;
+  }
+  .slider_control > :not(:first-child){
+    font-size: 17px;
+  }
+  .slider_control input[type='radio']:checked{
+    accent-color: black;
+  }
+  
+  /* * > #slide_pause1,
+  *:active > #slide_pause2 {
+      display: none;
+
+  }
+  
+  *:active> #slide_pause1 {
+      display: inline-block;
+  } */
