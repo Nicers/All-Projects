@@ -1,0 +1,12 @@
+.list{
+    margin: auto;
+    border-collapse: collapse;
+}
+.list,
+.list tr,
+.list th,
+.list td{
+    border: 2px solid black;
+    text-align: center;
+    padding:.2rem .2rem;
+}
