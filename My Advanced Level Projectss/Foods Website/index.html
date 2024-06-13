@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="src/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="public/style.css" />
+    <title>Food Website</title>
+    <link rel="stylesheet" href="src/input.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body class="bg-[#010a5e] font-[sans-serif]">
+    <!-- ******* SCROLL TO TOP BUTTON -->
+    <button onclick="goTop()" id="goTop" title="Go to top">
+      <i class="fa-solid fa-arrow-up text-black text-[18px] text-center"></i>
+    </button>
+    <!--  -->
+
+    <!--*****  HOME  *****-->
+    <section class="w-[100%] relative ps-2 px-4 sm:px-7" id="home">
+      <div class="w-full md:w-[1000px] mx-auto relative">
+        <header id="myHeader" class="font-[sans-serif] py-3">
+          <div class="w-full flex justify-between gap-5 sm:gap-0">
+            <!-- <div class="w-[480px] md:max-w-[1000px] flex justify-between bg-blue-400"> -->
+            <figure>
+              <a href="#home">
+                <h1 class="font-bold text-[24px]">
+                  <span class="text-white">BUR</span
+                  ><span class="text-[#ffcc00]">GER</span>
+                </h1>
+              </a>
+            </figure>
+            <div
+              class="flex flex-row-reverse items-center gap-0 sm:gap-5"
+              id="header-tab"
+            >
+              <div
+                class="text-white cursor-pointer text-xl flex items-center gap-6 mr-0 sm:mr-5"
+                id="mobile-tab"
+              >
+                <i class="fa-regular fa-moon"></i>
+                <i
+                  class="fa-sharp fa-solid fa-bars-staggered"
+                  onclick="showHeader()"
+                  id="menu"
+                ></i>
+              </div>
+              <div
+                class="text-[16px]hidden w-[inherit] z-50 fixed flex-col items-center gap-4"
+                id="tab"
+              >
+                <a href="#home" class="text-white hover:text-[#ffcc00]">Home</a>
+                <a
+                  href="#about"
+                  id="scroll"
+                  class="text-white hover:text-[#ffcc00]"
+                  >About Us</a
+                >
+                <a href="#menu" class="text-white hover:text-[#ffcc00]">Menu</a>
+                <a href="#review" class="text-white hover:text-[#ffcc00]"
+                  >Review</a
+                >
+                <a href="#contact" class="text-white hover:text-[#ffcc00]"
+                  >Contact</a
+                >
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div
+          class="text-white max-h-[100%] flex sm:flex-row flex-col items-center gap-12 mt-[3.5rem]"
+        >
+          <div class="basis-[100%] sm:basis-[50%] md:basis-[38%]">
+            <img
+              src="img/home-image.png"
+              class="animate-movingY w-52 sm:w-full"
+              alt=""
+            />
+          </div>
+          <div
+            class="basis-[100%] sm:basis-[50%] md:basis-[62%] flex flex-col items-center justify-center sm:items-start gap-11"
+          >
+            <div class="flex gap-5 flex-col items-center">
+              <h1
+                class="text-[36px] md:text-[60px] text-center sm:text-start tracking-tighter text-white font-bold leading-[3.4rem]"
+              >
+                HAPPY TUMMY WITH TASTY BURGERS.
+              </h1>
+              <hr id="title" />
+              <p
+                class="text-[#c0c0c0] text-[12px] text-center sm:text-start tracking-widest"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptatum,libero magni? Fugiat perspiciatis eius, sequi aliquid
+                ullam dolorem temporibus voluptate corrupti fugit saepe sunt
+                unde culpa? Tenetur quos quod laudantium.
+              </p>
+            </div>
+            <div class="flex gap-7 sm:gap-24">
+              <div class="flex flex-col items-center">
+                <i class="fa-solid fa-utensils text-[#ffcc00] text-[36px]"></i>
+                <p class="text-[16px] text-white">Delicious</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fa-solid fa-droplet text-[#ffcc00] text-[36px]"></i>
+                <p class="text-[16px] text-white">Fresh</p>
+              </div>
+              <div class="flex flex-col items-center">
+                <i class="fa-brands fa-envira text-[#ffcc00] text-[36px]"></i>
+                <p class="text-[16px] text-white">Organic</p>
+              </div>
+            </div>
+            <button
+              class="bg-[#ffcc00] hover:bg-yellow-500 duration-500 text-[14px] text-black w-fit rounded-lg px-9 py-3"
+            >
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--*****  FOOD VARIETY  *****-->
+    <section class="w-[100%] mt-[6rem] px-4 sm:px-7">
+      <div
+        class="max-w-[1000px] mx-auto flex flex-col sm:flex-row gap-5 h-auto"
+      >
+        <div
+          class="bg-[#ffcc00] pt-4 w-full flex items-center gap-4 rounded-md h-auto"
+        >
+          <div class="basis-[35%] md:basis-[30%]">
+            <img src="img/burger-1.png" class="w-[100px] h-auto" alt="" />
+          </div>
+          <div class="basis[65%] flex flex-col gap-2">
+            <p class="flex flex-col items-start justify-start gap-1">
+              <strong class="text-white font-bold text-[20px] leading-4"
+                >FOOD</strong
+              ><span class="text-white font-normal text-[12px]"
+                >Lorem ipsum dolor sit.
+              </span>
+            </p>
+            <a href="" class="">Buy online</a>
+          </div>
+        </div>
+
+        <div
+          class="bg-[#cc3433] w-[100%] pt-4 flex items-center gap-4 rounded-md h-auto"
+        >
+          <div class="basis-[30%]">
+            <img src="img/snack-1.png" class="w-[100px] h-auto" alt="" />
+          </div>
+          <div class="basis[70%] flex flex-col gap-2">
+            <p class="flex flex-col items-start justify-start gap-1">
+              <strong class="text-white font-bold text-[20px] leading-4"
+                >FOOD</strong
+              ><span class="text-white font-normal text-[12px]"
+                >Lorem ipsum dolor sit.
+              </span>
+            </p>
+            <a href="" class="text-[#ffcc00]">Buy online</a>
+          </div>
+        </div>
+
+        <div
+          class="bg-[#007936] w-[100%] pt-4 flex items-center gap-4 rounded-md h-auto"
+        >
+          <div class="basis-[30%]">
+            <img src="img/beverage-2.png" class="w-[100px] h-auto" alt="" />
+          </div>
+          <div class="basis[70%] flex flex-col gap-2">
+            <p class="flex flex-col items-start justify-start gap-1">
+              <strong class="text-white font-bold text-[20px] leading-4"
+                >FOOD</strong
+              ><span class="text-white font-normal text-[12px]"
+                >Lorem ipsum dolor sit.
+              </span>
+            </p>
+            <a href="" class="text-[#ffcc00]">Buy online</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--*****  PAY DAY WEEK  *****-->
+    <section
+      class="w-[100%] mt-[6rem] px-4 sm:px-7 flex flex-col items-center justify-center gap-5"
+    >
+      <div class="max-w-[1000px] grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div
+          class="bg-[#010d78] p-5 flex flex-col-reverse items-center sm:flex-row-reverse md:flex-row gap-3 rounded-lg w-full h-auto"
+        >
+          <div class="w-full flex flex-col justify-center gap-3">
+            <p class="text-[12px] text-[#ffcc00]">Payday Promo</p>
+            <h1 class="text-[20px] text-[white] font-bold w-full leading-7">
+              GET A 10% DISCOUNT ON PAYDAY WEEK
+            </h1>
+            <p class="text-[12px] text-[#c0c0c0] w-full sm:w-[70%]">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <a class="text-[12px] text-[#ffcc00]" href="">Buy online</a>
+          </div>
+          <div class="w-fit h-fit mr-4 hover:animate-movingY">
+            <img
+              src="img/promo-1.png"
+              class="w-40 sm:w-[270px] sm:h-[190px]"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div
+          class="bg-[#010d78] p-5 flex gap-3 flex-col-reverse items-center sm:flex-row-reverse md:flex-row rounded-lg w-full h-auto"
+        >
+          <div class="w-full flex flex-col justify-center gap-3">
+            <p class="text-[12px] text-[#ffcc00]">Payday Promo</p>
+            <h1 class="text-[20px] text-[white] font-bold w-full leading-7">
+              GET A 10% DISCOUNT ON PAYDAY WEEK
+            </h1>
+            <p
+              class="text-[12px] text-[#c0c0c0] tracking-widest w-full sm:w-[70%]"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <a class="text-[12px] text-[#ffcc00]" href="">Buy online</a>
+          </div>
+          <div class="w-fit h-fit mr-4 hover:animate-movingY">
+            <img
+              src="img/promo-2.png"
+              class="w-40 sm:w-[270px] h-[190px]"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- **** ABOUT **** -->
+    <section class="w-[100%] mt-[6rem] px-4 sm:px-7" id="about">
+      <div class="max-w-[1000px] mx-auto">
+        <div class="text-white flex flex-col sm:flex-row gap-10">
+          <div class="basis-[50%]">
+            <img src="img/about.jpg" class="w-full rounded-lg" alt="" />
+          </div>
+          <div
+            class="basis-[50%] flex flex-col justify-start items-start gap-6"
+          >
+            <div class="flex gap-5 flex-col">
+              <h1 class="text-[25px] text-white font-bold">
+                FIND FOOD AND DRINKS, ALL-IN-ONE PLACE FOR YOUR BEST TASTE.
+              </h1>
+              <hr id="title" />
+              <p class="text-[#c0c0c0] text-[12px] tracking-widest">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+                commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                penatibus et magnis dis parturient montes.
+              </p>
+            </div>
+            <div class="grid grid-cols-2 gap-10 sm:gap-20">
+              <div class="grid grid-cols-1 gap-2">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-check text-[#ffcc00] text-[12px]"></i>
+                  <p class="text-[12px] text-[#c0c0c0]">Best Price</p>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-check text-[#ffcc00] text-[12px]"></i>
+                  <p class="text-[12px] text-[#c0c0c0] text-start">
+                    Best Service
+                  </p>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 gap-2">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-check text-[#ffcc00] text-[12px]"></i>
+                  <p class="text-[12px] text-[#c0c0c0]">Fresh Ingredient</p>
+                </div>
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-check text-[#ffcc00] text-[12px]"></i>
+                  <p class="text-[12px] text-[#c0c0c0]">Health Protocol</p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="bg-[#ffcc00] hover:bg-yellow-500 duration-500 text-[14px] text-black w-fit rounded-lg px-9 py-3"
+            >
+              About Us
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- **** MENU **** -->
+    <section class="w-[100%] mt-[6rem] px-4 sm:px-7 mb-[1rem]" id="menu">
+      <div class="max-w-[1000px] mx-auto">
+        <div class="flex gap-4 flex-col items-center w-fit mx-auto">
+          <h1 class="text-[30px] text-white font-bold">OUR BEST MENU</h1>
+          <hr id="title2" />
+          <p
+            class="text-[#c0c0c0] text-[12px] tracking-widest text-center w-full sm:w-[65%]"
+          >
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-3 justify-center my-10">
+          <button
+            onclick="showAll()"
+            autofocus
+            class="px-9 py-3 border-none outline-none focus:bg-[#ffcc00] focus:text-black rounded-md text-white bg-[#010d78] hover:text-black hover:bg-[#ffcc00] duration-500 text-[14px] w-fit h-fit"
+          >
+            All
+          </button>
+          <button
+            onclick="showFood()"
+            class="px-9 py-3 rounded-md text-white bg-[#010d78] focus:bg-[#ffcc00] focus:text-black hover:text-black hover:bg-[#ffcc00] duration-500 text-[14px] w-fit h-fit"
+          >
+            Food
+          </button>
+          <button
+            onclick="showSnack()"
+            class="px-9 py-3 rounded-md text-white bg-[#010d78] focus:bg-[#ffcc00] focus:text-black hover:text-black hover:bg-[#ffcc00] duration-500 text-[14px] w-fit h-fit"
+          >
+            Snack
+          </button>
+          <button
+            onclick="showBeverage()"
+            class="px-9 py-3 rounded-md text-white bg-[#010d78] focus:bg-[#ffcc00] focus:text-black hover:text-black hover:bg-[#ffcc00] duration-500 text-[14px] w-fit h-fit"
+          >
+            Beaverage
+          </button>
+        </div>
+
+        <section
+          class="grid grid-cols-1 sm:grid-cols-2 gap-9 sm:gap-5 md:grid-cols-4 md:gap-11"
+        >
+          <div class="food">
+            <div
+              class="bg-[#010d78] duration-300 mb-2 sm:mb-5 w-auto h-[14rem] md:h-[9.5rem] rounded-3xl hover:bg-[#ffcc00] flex justify-center items-center"
+            >
+              <img
+                src="img/burger-1.png"
+                class="cursor-pointer w-[12rem] md:w-[6rem] h-auto duration-300 hover:scale-110"
+                alt=""
+              />
+            </div>
+            <h1
+              class="text-[20px] md:text-[15px] text-[white] font-extrabold leading-7"
+            >
+              REGULAR BEEF BURGER
+            </h1>
+            <p class="text-[12px] text-[#c0c0c0] tracking-widest">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="text-[16px] text-[#ffcc00] mt-2">$ 42.00</p>
+          </div>
+          <div class="food">
+            <div
+              class="bg-[#010d78] duration-300 mb-2 sm:mb-5 w-auto h-[14rem] md:h-[9.5rem] rounded-3xl hover:bg-[#ffcc00] flex justify-center items-center"
+            >
+              <img
+                src="img/burger-2.png"
+                class="cursor-pointer w-[12rem] md:w-[6rem] h-auto duration-300 hover:scale-110"
+                alt=""
+              />
+            </div>
+            <h1
+              class="text-[20px] md:text-[15px] text-[white] font-extrabold leading-8 md:leading-7"
+            >
+              REGULAR BEEF BURGER
+            </h1>
+            <p class="text-[12px] text-[#c0c0c0] tracking-widest">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="text-[16px] text-[#ffcc00] mt-2">$ 42.00</p>
+          </div>
+          <div class="food">
+            <div
+              class="bg-[#010d78] duration-300 mb-2 sm:mb-5 w-auto h-[14rem] md:h-[9.5rem] rounded-3xl hover:bg-[#ffcc00] flex justify-center items-center"
+            >
+              <img
+                src="img/burger-3.png"
+                class="cursor-pointer w-[12rem] md:w-[6rem] h-auto duration-300 hover:scale-110"
+                alt=""
+              />
+            </div>
+            <h1
+              class="text-[20px] md:text-[15px] text-[white] font-extrabold leading-8 md:leading-7"
+            >
+              REGULAR BEEF BURGER
+            </h1>
+            <p class="text-[12px] text-[#c0c0c0] tracking-widest">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="text-[16px] text-[#ffcc00] mt-2">$ 42.00</p>
+          </div>
+          <div class="food">
+            <div
+              class="bg-[#010d78] duration-300 mb-2 sm:mb-5 w-auto h-[14rem] md:h-[9.5rem] rounded-3xl hover:bg-[#ffcc00] flex justify-center items-center"
+            >
+              <img
+                src="img/burger-4.png"
+                class="cursor-pointer w-[12rem] md:w-[6rem] h-auto duration-300 hover:scale-110"
+                alt=""
+              />
+            </div>
+            <h1
+              class="text-[20px] md:text-[15px] text-[white] font-extrabold leading-8 md:leading-7"
+            >
+              REGULAR BEEF BURGER
+            </h1>
+            <p class="text-[12px] text-[#c0c0c0] tracking-widest">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="text-[16px] text-[#ffcc00] mt-2">$ 42.00</p>
+          </div>
+
+          <div class="food">
+            <div
+              class="bg-[#010d78] duration-300 mb-2 sm:mb-5 w-auto h-[14rem] md:h-[9.5rem] rounded-3xl hover:bg-[#ffcc00] flex justify-center items-center"
+            >
+              <img
+                src="img/burger-5.png"
+                class="cursor-pointer w-[12rem] md:w-[6rem] h-auto duration-300 hover:scale-110"
+                alt=""
+              />
+            </div>
+            <h1
+              class="text-[20px] md:text-[15px] text-[white] font-extrabold leading-8 md:leading-7"
+            >
+              REGULAR BEEF BURGER
+            </h1>
+            <p class="text-[12px] text-[#c0c0c0] tracking-widest">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="text-[16px] text-[#ffcc00] mt-2">$ 42.00</p>
+          </div>
+          <div class="snack">
+            <div
+              class="bg-[#010d78] duration-300 mb-2 sm:mb-5 w-auto h-[14rem] md:h-[9.5rem] rounded-3xl hover:bg-[#ffcc00] flex justify-center items-center"
+            >
+              <img
+                src="img/snack-1.png"
+                class="cursor-pointer w-[12rem] md:w-[6rem] h-auto duration-300 hover:scale-110"
+                alt=""
+              />
+            </div>
+            <h1
+              class="text-[20px] md:text-[15px] text-[white] font-extrabold leading-8 md:leading-7"
+            >
+              FRENCH FRIES
+            </h1>
+            <p class="text-[12px] text-[#c0c0c0] tracking-widest">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="text-[16px] text-[#ffcc00] mt-2">$ 42.00</p>
+          </div>
+          <div class="snack">
+            <div
+              class="bg-[#010d78] duration-300 mb-2 sm:mb-5 w-auto h-[14rem] md:h-[9.5rem] rounded-3xl hover:bg-[#ffcc00] flex justify-center items-center"
+            >
+              <img
+                src="img/snack-2.png"
+                class="cursor-pointer w-[12rem] md:w-[6rem] h-auto duration-300 hover:scale-110"
+                alt=""
+              />
+            </div>
+            <h1
+              class="text-[20px] md:text-[15px] text-[white] font-extrabold leading-8 md:leading-7"
+            >
+              FRENCH FRIES
+            </h1>
+            <p class="text-[12px] text-[#c0c0c0] tracking-widest">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="text-[16px] text-[#ffcc00] mt-2">$ 42.00</p>
+          </div>
+          <div class="snack">
+            <div
+              class="bg-[#010d78] duration-300 mb-2 sm:mb-5 w-auto h-[14rem] md:h-[9.5rem] rounded-3xl hover:bg-[#ffcc00] flex justify-center items-center"
+            >
+              <img
+                src="img/snack-3.png"
+                class="cursor-pointer w-[12rem] md:w-[6rem] h-auto duration-300 hover:scale-110"
+                alt=""
+              />
+            </div>
+            <h1
+              class="text-[20px] md:text-[15px] text-[white] font-extrabold leading-8 md:leading-7"
+            >
+              FRENCH FRIES
+            </h1>
+            <p class="text-[12px] text-[#c0c0c0] tracking-widest">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="text-[16px] text-[#ffcc00] mt-2">$ 42.00</p>
+          </div>
+
+          <div class="snack">
+            <div
+              class="bg-[#010d78] duration-300 mb-2 sm:mb-5 w-auto h-[14rem] md:h-[9.5rem] rounded-3xl hover:bg-[#ffcc00] flex justify-center items-center"
+            >
+              <img
+                src="img/snack-4.png"
+                class="cursor-pointer w-[12rem] md:w-[6rem] h-auto duration-300 hover:scale-110"
+                alt=""
+              />
+            </div>
+            <h1
+              class="text-[20px] md:text-[15px] text-[white] font-extrabold leading-8 md:leading-7"
+            >
+              REGULAR BEEF BURGER
+            </h1>
+            <p class="text-[12px] text-[#c0c0c0] tracking-widest">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="text-[16px] text-[#ffcc00] mt-2">$ 42.00</p>
+          </div>
+          <div class="snack">
+            <div
+              class="bg-[#010d78] duration-300 mb-2 sm:mb-5 w-auto h-[14rem] md:h-[9.5rem] rounded-3xl hover:bg-[#ffcc00] flex justify-center items-center"
+            >
+              <img
+                src="img/snack-5.png"
+                class="cursor-pointer w-[12rem] md:w-[6rem] h-auto duration-300 hover:scale-110"
+                alt=""
+              />
+            </div>
+            <h1
+              class="text-[20px] md:text-[15px] text-[white] font-extrabold leading-8 md:leading-7"
+            >
+              FRENCH FRIES
+            </h1>
+            <p class="text-[12px] text-[#c0c0c0] tracking-widest">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="text-[16px] text-[#ffcc00] mt-2">$ 42.00</p>
+          </div>
+          <div class="snack">
+            <div
+              class="bg-[#010d78] duration-300 mb-2 sm:mb-5 w-auto h-[14rem] md:h-[9.5rem] rounded-3xl hover:bg-[#ffcc00] flex justify-center items-center"
+            >
+              <img
+                src="img/snack-6.png"
+                class="cursor-pointer w-[12rem] md:w-[6rem] h-auto duration-300 hover:scale-110"
+                alt=""
+              />
+            </div>
+            <h1
+              class="text-[20px] md:text-[15px] text-[white] font-extrabold leading-8 md:leading-7"
+            >
+              FRENCH FRIES
+            </h1>
+            <p class="text-[12px] text-[#c0c0c0] tracking-widest">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="text-[16px] text-[#ffcc00] mt-2">$ 42.00</p>
+          </div>
+          <div class="beverage">
+            <div
+              class="bg-[#010d78] duration-300 mb-2 sm:mb-5 w-auto h-[14rem] md:h-[9.5rem] rounded-3xl hover:bg-[#ffcc00] flex justify-center items-center"
+            >
+              <img
+                src="img/beverage-1.png"
+                class="cursor-pointer w-[8rem] md:w-[6rem] h-auto duration-300 hover:scale-110"
+                alt=""
+              />
+            </div>
+            <h1
+              class="text-[20px] md:text-[15px] text-[white] font-extrabold leading-8 md:leading-7"
+            >
+              SWEET SMOOTHIE
+            </h1>
+            <p class="text-[12px] text-[#c0c0c0] tracking-widest">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="text-[16px] text-[#ffcc00] mt-2">$ 42.00</p>
+          </div>
+
+          <div class="beverage">
+            <div
+              class="bg-[#010d78] duration-300 mb-2 sm:mb-5 w-auto h-[14rem] md:h-[9.5rem] rounded-3xl hover:bg-[#ffcc00] flex justify-center items-center"
+            >
+              <img
+                src="img/beverage-2.png"
+                class="cursor-pointer w-[12rem] md:w-[6rem] h-auto duration-300 hover:scale-110"
+                alt=""
+              />
+            </div>
+            <h1
+              class="text-[20px] md:text-[15px] text-[white] font-extrabold leading-8 md:leading-7"
+            >
+              SWEET SMOOTHIE
+            </h1>
+            <p class="text-[12px] text-[#c0c0c0] tracking-widest">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="text-[16px] text-[#ffcc00] mt-2">$ 42.00</p>
+          </div>
+          <div class="beverage">
+            <div
+              class="bg-[#010d78] duration-300 mb-2 sm:mb-5 w-auto h-[14rem] md:h-[9.5rem] rounded-3xl hover:bg-[#ffcc00] flex justify-center items-center"
+            >
+              <img
+                src="img/beverage-3.png"
+                class="cursor-pointer w-[10rem] md:w-[6rem] h-auto duration-300 hover:scale-110"
+                alt=""
+              />
+            </div>
+            <h1
+              class="text-[20px] md:text-[15px] text-[white] font-extrabold leading-8 md:leading-7"
+            >
+              SWEET SMOOTHIE
+            </h1>
+            <p class="text-[12px] text-[#c0c0c0] tracking-widest">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="text-[16px] text-[#ffcc00] mt-2">$ 42.00</p>
+          </div>
+          <div class="beverage">
+            <div
+              class="bg-[#010d78] duration-300 mb-2 sm:mb-5 w-auto h-[14rem] md:h-[9.5rem] rounded-3xl hover:bg-[#ffcc00] flex justify-center items-center"
+            >
+              <img
+                src="img/beverage-4.png"
+                class="cursor-pointer w-[8rem] md:w-[6rem] h-auto duration-300 hover:scale-110"
+                alt=""
+              />
+            </div>
+            <h1
+              class="text-[20px] md:text-[15px] text-[white] font-extrabold leading-8 md:leading-7"
+            >
+              SWEET SMOOTHIE
+            </h1>
+            <p class="text-[12px] text-[#c0c0c0] tracking-widest">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="text-[16px] text-[#ffcc00] mt-2">$ 42.00</p>
+          </div>
+          <div class="beverage">
+            <div
+              class="bg-[#010d78] duration-300 mb-2 sm:mb-5 w-auto h-[14rem] md:h-[9.5rem] rounded-3xl hover:bg-[#ffcc00] flex justify-center items-center"
+            >
+              <img
+                src="img/beverage-5.png"
+                class="cursor-pointer w-[12rem] md:w-[6rem] h-auto duration-300 hover:scale-110"
+                alt=""
+              />
+            </div>
+            <h1
+              class="text-[20px] md:text-[15px] text-[white] font-extrabold leading-8 md:leading-7"
+            >
+              SWEET SMOOTHIE
+            </h1>
+            <p class="text-[12px] text-[#c0c0c0] tracking-widest">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <p class="text-[16px] text-[#ffcc00] mt-2">$ 42.00</p>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- **** TESTIMONIALS **** -->
+    <section class="w-[100%] bg-[#010d78] px-4 sm:px-7 py-[5rem]" id="review">
+      <div class="max-w-[1100px] mx-auto">
+        <div class="flex gap-4 flex-col items-center w-fit mx-auto">
+          <h1 class="text-[27px] sm:text-[30px] text-white font-bold">
+            CUSTOMER REVIEW
+          </h1>
+          <hr id="title2" />
+          <p
+            class="text-[#c0c0c0] text-[12px] tracking-widest text-center w-full sm:w-[65%]"
+          >
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa.
+          </p>
+        </div>
+
+        <section class="mx-auto">
+          <div class="card__container swiper flex justify-center">
+            <div class="card__content w-full mx-auto">
+              <div class="swiper-wrapper w-full">
+                <article
+                  class="card__article swiper-slide bg-[#010a5e] hover:cursor-grab rounded-md h-auto p-6 flex flex-col gap-5"
+                >
+                  <p class="text-[12px] text-[#c0c0c0] w-auto tracking-widest">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Similique culpa ut amet voluptas asperiores alias sed
+                    consequatur.
+                  </p>
+                  <div class="flex justify-between">
+                    <div class="flex gap-2 items-center">
+                      <img
+                        src="img/review-1.jpg"
+                        class="rounded-[50%] w-[50px] h-[50px]"
+                        alt=""
+                      />
+                      <p class="flex flex-col justify-center gap-1">
+                        <strong
+                          class="text-[16px] text-white leading-3 tracking-wide"
+                          >JOHN DOE</strong
+                        ><span
+                          class="text-[12px] text-[#c0c0c0] tracking-widest"
+                          >Designer</span
+                        >
+                      </p>
+                    </div>
+                    <i
+                      class="fa-solid fa-quote-right text-[#ffcc00] text-[36px]"
+                    ></i>
+                  </div>
+                </article>
+                <article
+                  class="card__article swiper-slide bg-[#010a5e] hover:cursor-grab rounded-md h-auto p-6 flex flex-col gap-5"
+                >
+                  <p class="text-[12px] text-[#c0c0c0] w-auto tracking-widest">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Similique culpa ut amet voluptas asperiores alias sed
+                    consequatur.
+                  </p>
+                  <div class="flex justify-between">
+                    <div class="flex gap-2 items-center">
+                      <img
+                        src="img/review-2.jpg"
+                        class="rounded-[50%] w-[50px] h-[50px]"
+                        alt=""
+                      />
+                      <p class="flex flex-col justify-center gap-1">
+                        <strong
+                          class="text-[16px] text-white leading-3 tracking-wide"
+                          >JOHN DOE</strong
+                        ><span
+                          class="text-[12px] text-[#c0c0c0] tracking-widest"
+                          >Designer</span
+                        >
+                      </p>
+                    </div>
+                    <i
+                      class="fa-solid fa-quote-right text-[#ffcc00] text-[36px]"
+                    ></i>
+                  </div>
+                </article>
+                <article
+                  class="card__article swiper-slide bg-[#010a5e] hover:cursor-grab rounded-md h-auto p-6 flex flex-col gap-5"
+                >
+                  <p class="text-[12px] text-[#c0c0c0] w-auto tracking-widest">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Similique culpa ut amet voluptas asperiores alias sed
+                    consequatur.
+                  </p>
+                  <div class="flex justify-between">
+                    <div class="flex gap-2 items-center">
+                      <img
+                        src="img/review-3.jpg"
+                        class="rounded-[50%] w-[50px] h-[50px]"
+                        alt=""
+                      />
+                      <p class="flex flex-col justify-center gap-1">
+                        <strong
+                          class="text-[16px] text-white leading-3 tracking-wide"
+                          >JOHN DOE</strong
+                        ><span
+                          class="text-[12px] text-[#c0c0c0] tracking-widest"
+                          >Designer</span
+                        >
+                      </p>
+                    </div>
+                    <i
+                      class="fa-solid fa-quote-right text-[#ffcc00] text-[36px]"
+                    ></i>
+                  </div>
+                </article>
+                <article
+                  class="card__article swiper-slide bg-[#010a5e] hover:cursor-grab rounded-md h-auto p-6 flex flex-col gap-5"
+                >
+                  <p class="text-[12px] text-[#c0c0c0] w-auto tracking-widest">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Similique culpa ut amet voluptas asperiores alias sed
+                    consequatur.
+                  </p>
+                  <div class="flex justify-between">
+                    <div class="flex gap-2 items-center">
+                      <img
+                        src="img/review-4.jpg"
+                        class="rounded-[50%] w-[50px] h-[50px]"
+                        alt=""
+                      />
+                      <p class="flex flex-col justify-center gap-1">
+                        <strong
+                          class="text-[16px] text-white leading-3 tracking-wide"
+                          >JOHN DOE</strong
+                        ><span
+                          class="text-[12px] text-[#c0c0c0] tracking-widest"
+                          >Designer</span
+                        >
+                      </p>
+                    </div>
+                    <i
+                      class="fa-solid fa-quote-right text-[#ffcc00] text-[36px]"
+                    ></i>
+                  </div>
+                </article>
+                <article
+                  class="card__article swiper-slide bg-[#010a5e] hover:cursor-grab rounded-md h-auto p-6 flex flex-col gap-5"
+                >
+                  <p class="text-[12px] text-[#c0c0c0] w-auto tracking-widest">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Similique culpa ut amet voluptas asperiores alias sed
+                    consequatur.
+                  </p>
+                  <div class="flex justify-between">
+                    <div class="flex gap-2 items-center">
+                      <img
+                        src="img/review-5.jpg"
+                        class="rounded-[50%] w-[50px] h-[50px]"
+                        alt=""
+                      />
+                      <p class="flex flex-col justify-center gap-1">
+                        <strong
+                          class="text-[16px] text-white leading-3 tracking-wide"
+                          >JOHN DOE</strong
+                        ><span
+                          class="text-[12px] text-[#c0c0c0] tracking-widest"
+                          >Designer</span
+                        >
+                      </p>
+                    </div>
+                    <i
+                      class="fa-solid fa-quote-right text-[#ffcc00] text-[36px]"
+                    ></i>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- **** Contact **** -->
+    <section
+      class="w-[100%] bg-[#ffcc00] px-4 sm:px-7 py-[3.8rem]"
+      id="contact"
+    >
+      <div
+        class="sm:max-w-[1000px] sm:mx-auto flex flex-col sm:flex-row items-center gap-[1rem] md:gap-[5rem]"
+      >
+        <div class="basis-[100%] sm:basis-[50%]">
+          <h1
+            class="mb-2 text-[21px] sm:text-[30px] font-semibold text-black tracking-tight"
+          >
+            GET EXCLUSIVE UPDATE
+          </h1>
+          <p class="text-[14px] tracking-widest text-white">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div>
+        <div class="w-[100%] sm:basis-[50%] flex flex-col sm:flex-row gap-3">
+          <input
+            type="email"
+            placeholder="Email Address"
+            class="w-[100%] sm:w-[50%] md:w-auto text-gray-400 px-3 outline-none h-12 sm:py-[.7rem] rounded-md md:flex-1"
+          />
+          <button
+            class="w-[100%] sm:w-[50%] h-12 md:w-auto text-[14px] text-white bg-black rounded-md md:px-[1.5rem] tracking-widest"
+          >
+            <i class="fa-solid fa-paper-plane pr-2"></i> Subscribe
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- **** Footer **** -->
+    <footer class="w-[100%] pt-[4.5rem] pb-[3rem] px-4 sm:px-7">
+      <div
+        class="max-w-[1000px] mx-auto grid grid-cols-1 sm:grid-cols-2 gap-7 md:gap-0"
+      >
+        <div class="basis-[50%] flex flex-col sm:flex-row gap-6">
+          <figure class="basis-[50%]">
+            <h1 class="font-bold text-[36px]">
+              <span class="text-white">BUR</span
+              ><span class="text-[#ffcc00]">GER</span>
+            </h1>
+            <p class="text-[12px] text-white tracking-widest">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+              tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            </p>
+          </figure>
+          <div class="basis-[50%] text-white flex flex-col gap-3">
+            <h3 class="text-[16px] font-semibold">SUPPORT</h3>
+            <a href="" class="hover:text-[#ffcc00] duration-400 text-[12px]"
+              >FAQ's</a
+            >
+            <a href="" class="hover:text-[#ffcc00] duration-400 text-[12px]"
+              >Privacy Policy</a
+            >
+            <a href="" class="hover:text-[#ffcc00] duration-400 text-[12px]"
+              >Term & Condition</a
+            >
+            <a href="" class="hover:text-[#ffcc00] duration-400 text-[12px]"
+              >Contact</a
+            >
+          </div>
+        </div>
+
+        <div
+          class="link basis-[50%] grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-5 tracking-widest"
+        >
+          <div class="text-white flex flex-col gap-3">
+            <h3 class="text-[16px] font-semibold">PHONE</h3>
+            <a href="" class="text-white text-[12px]"
+              ><i
+                class="fa-solid fa-phone text-[#ffcc00] text-[18px] font-semibold"
+              ></i>
+              +92304556573</a
+            >
+          </div>
+          <div class="text-white flex flex-col gap-3">
+            <h3 class="text-[16px] font-semibold">EMAIL</h3>
+            <a href="" class="text-white text-[12px]"
+              ><i class="fa-solid fa-envelope text-[#ffcc00] text-[18px]"></i>
+              nicerweb@gmail.com</a
+            >
+          </div>
+          <div class="text-white flex flex-col gap-3">
+            <h3 class="text-[16px] font-semibold">ADDRESS</h3>
+            <a href="" class="text-white text-[12px]"
+              ><i
+                class="fa-solid fa-location-dot text-[#ffcc00] text-[18px]"
+              ></i>
+              Lakki Marwat</a
+            >
+          </div>
+          <div class="text-white flex flex-col gap-3">
+            <h3 class="text-[16px] font-semibold">FOLLOW US</h3>
+            <div class="flex gap-6">
+              <a
+                href=""
+                class="text-[#ffcc00] hover:animate-social block duration-400 text-[12px]"
+                ><i
+                  class="fa-brands fa-facebook-f text-[18px] font-semibold"
+                ></i
+              ></a>
+              <a
+                href=""
+                class="text-[#ffcc00] hover:animate-social block duration-400 text-[12px]"
+                ><i class="fa-brands fa-twitter text-[18px] font-semibold"></i
+              ></a>
+              <a
+                href=""
+                class="text-[#ffcc00] hover:animate-social block duration-400 text-[12px]"
+                ><i class="fa-brands fa-instagram text-[18px] font-semibold"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="src/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+  scroll-behavior: smooth;
+}
+#title{
+    border: 1px solid #ffcc00;
+    width: 25%;
+}
+
+#title2{
+    border: 1px solid #ffcc00;
+    width: 19%;
+    margin-bottom: .5rem;
+}
+  
+a {
+  text-decoration: none;
+}
+
+
+/**********  SCROLL TOP BUTTON  **********/
+#goTop{
+  display: block none;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #ffcc00;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.header-icon{
+  display: none;
+}
+
+
+/********** HEADER  **********/
+.sticky{
+  position: fixed;
+  border-bottom: 1px solid #ffcc00;
+  top: 0;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding-inline: 1.75rem;
+  margin: auto;
+  background-color: #010a5e;
+  display: flex;
+  justify-content: center;
+  
+}
+.mobile-header{
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  z-index: 100;
+  width: 100%;
+  background: #010a5e;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #ffcc00;
+}
+#menu{
+  z-index: 1000;
+}
+
+
+/********** CARD **********/
+.card__container {
+  padding-block: 3rem;
+  
+}
+.card__content{
+  overflow: hidden;
+}
+.swiper-wrapper{
+  width: 100%;
+}
+.card__article {
+  width: 300px;
+  overflow: hidden;
+}
+
+
+/**********  BREAKPOINTS **********/
+@media screen and (max-width: 1024px) {
+  .card__container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .card__container {
+    max-width: 1024px;
+  }
+}
